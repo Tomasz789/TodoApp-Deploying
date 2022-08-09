@@ -1,0 +1,28 @@
+﻿@model Todo.Domain.Entities.TodoList
+
+
+<div class="card card-outline-secondary col-6 m-3 p-1">
+    <div class="card-header text-center">
+        <h1>@Model.Title</h1>
+    </div>
+   <div class="card-body text-center">
+       <div class="text-justify">
+           <p>@Model.Description</P>
+       </div>
+   </div>
+   <div class="card-footer">
+       <p>Total: @Model.Tasks.Count() tasks</p>
+       <p>Updated: @Model.Updated.ToShortDateString()</p>
+       <div>
+           <div class="btn-group">
+                 <a class="btn btn-primary ml-3" asp-controller="List" asp-action="Details" asp-route-id="@Model.Id">
+                     <i class="bi bi-binoculars-fill"></i>&nbsp; View</a>
+                 <a class="btn btn-success ml-3" asp-controller="List" asp-action="Edit" asp-route-id="@Model.Id">
+                     <i class="bi bi-pen-fill"></i>&nbsp; Edit</a>
+                 <a class="btn btn-danger ml-3" asp-controller="List" asp-action="Delete" asp-route-id="@Model.Id">
+                     <i class="bi bi-trash"></i>&nbsp; Remove</a>
+           </div>
+       </div>
+   </div>
+</div>
+

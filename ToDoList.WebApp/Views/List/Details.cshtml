@@ -1,0 +1,24 @@
+﻿@using Todo.Domain.Entities
+@using ToDoList.WebApp.Models.ViewModels
+@model TodoList
+
+<div class="container">
+    <div class="col-10 m-1">
+        <partial name="TaskSortSummary" model="new SortTasksViewModel()" />
+    </div>
+    <div class="row col-11">
+        <div class="col-3 text-center m-1">
+            <div class="card-footer">
+                <h2>List name: @Model.Title</h2>
+                <p>Created: @Model.CreatedDate</p>
+                <p>Last Updated: @Model.Updated</p>
+                <p>Contains: <span class="text-success">@Model.Tasks.Count()</span> tasks.</p>
+                <a asp-controller="Task" asp-action="Create" class="btn btn-success" asp-route-id="@Model.Id">New Task</a>
+            </div>
+        </div>
+        <div class="row col-8 m-1">
+            <partial name="TaskTableSummary" model="@Model.Tasks" />
+        </div>
+ </div>
+</div>
+

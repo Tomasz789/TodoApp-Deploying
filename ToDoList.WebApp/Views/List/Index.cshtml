@@ -1,0 +1,28 @@
+﻿@using ToDoList.WebApp.Models.ViewModels.PagingVM
+@using ToDoList.WebApp.Models.ViewModels.Sort
+@model TaskListsPagingViewModel
+
+<div class="d-flex col-12">
+    <div class="col-3 mr-2">
+        <partial name="SortListSummary" model="new SortListViewModel()" />
+
+    </div>
+    <div class="col-9 m-2 ml-5 text-center">
+        <a class="btn btn-primary" asp-controller="List" asp-action="Create">
+            <i class="bi bi-plus-circle-fill"></i>&nbsp; Add list
+        </a>
+        @foreach (var m in Model.Lists)
+        {
+            <partial name="ListSummary" model="m" />
+        }
+    </div>
+</div>
+<div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-success"
+     class="btn-group pull-right m-1">
+    @for (var @b = 1; b < @Model.PagingInfo.TotalItems; ++@b)
+    {
+        <a asp-action="Index" asp-controller="List" asp-route-page="@b" class="btn btn-outline-success">@b</a>
+    }
+</div>
+

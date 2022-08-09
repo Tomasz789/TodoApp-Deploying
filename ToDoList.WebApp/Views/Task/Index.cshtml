@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Todo.Domain.Entities.TodoTask>
+
+
+@foreach(var t in Model)
+{
+    <h1>@t.Id</h1>
+    <p>@t.Title</p>
+    <p>@t.EndDate</p>
+}

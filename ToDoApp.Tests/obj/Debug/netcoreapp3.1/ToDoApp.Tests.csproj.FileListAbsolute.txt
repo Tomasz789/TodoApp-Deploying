@@ -1,0 +1,13 @@
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\bin\Debug\netcoreapp3.1\ToDoApp.Tests.deps.json
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\bin\Debug\netcoreapp3.1\ToDoApp.Tests.dll
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\bin\Debug\netcoreapp3.1\ToDoApp.Tests.pdb
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\bin\Debug\netcoreapp3.1\Todo.Domain.Entities.dll
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\bin\Debug\netcoreapp3.1\Todo.Domain.Entities.pdb
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\obj\Debug\netcoreapp3.1\ToDoApp.Tests.csproj.AssemblyReference.cache
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\obj\Debug\netcoreapp3.1\ToDoApp.Tests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\obj\Debug\netcoreapp3.1\ToDoApp.Tests.AssemblyInfoInputs.cache
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\obj\Debug\netcoreapp3.1\ToDoApp.Tests.AssemblyInfo.cs
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\obj\Debug\netcoreapp3.1\ToDoApp.Tests.csproj.CoreCompileInputs.cache
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\obj\Debug\netcoreapp3.1\ToDoApp.Tests.csproj.CopyComplete
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\obj\Debug\netcoreapp3.1\ToDoApp.Tests.dll
+D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\obj\Debug\netcoreapp3.1\ToDoApp.Tests.pdb

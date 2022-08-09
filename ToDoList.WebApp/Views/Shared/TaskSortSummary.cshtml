@@ -1,0 +1,27 @@
+﻿@using ToDoList.WebApp.Models.ViewModels
+@using Todo.Domain.Entities.TodoTaskStatus
+@model SortTasksViewModel
+
+<div class="row">
+    <form class="form-group">
+        <label asp-for=CreatedDateFrom></label>
+        <input type="datetime-local" asp-for="CreatedDateFrom"/>
+        <label asp-for="CreatedDateTo"></label>
+        <input type="datetime-local" asp-for=CreatedDateTo />
+        <label asp-for="EndDateFrom"></label>
+        <input type="datetime-local" asp-for=EndDateFrom />
+        <label asp-for="EndDateTo"></label>
+        <input type="datetime-local" asp-for=EndDateTo />
+        <div class="text-center">
+            <label asp-for="Priority"></label>
+            <select asp-for="Priority" asp-items="@Html.GetEnumSelectList<Priority>()">
+                <option>Expand</option>
+            </select>
+            <label asp-for="Status"></label>
+            <select asp-for="Status" asp-items="@Html.GetEnumSelectList<Todo.Domain.Entities.TodoTaskStatus.TaskStatus>()" >
+                <option>Expand</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" asp-controller="Task" asp-action="Search">Search</button>
+    </form>
+</div>

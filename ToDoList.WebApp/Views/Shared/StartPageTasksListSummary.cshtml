@@ -1,0 +1,20 @@
+﻿@using Todo.Domain.Entities
+@model TodoList
+
+<div class="col-12 text-center text-white">
+        <div class="card col-4 bg-primary">
+            <div class="card-header">
+                <h1>@Model.Title</h1>
+                <p>@Model.Tasks.Count() activities</p>
+            </div>
+            <div class="card-body text-secondary bg-white">
+                @foreach (var task in @Model.Tasks)
+                {
+                    <h4>@task.Title</h4>
+                }
+            </div>
+            <div class="card-footer">
+                <p>Contains @Model.Tasks.Count() <strong class="text-danger"> important.</strong></p>
+            </div>
+        </div>
+</div>

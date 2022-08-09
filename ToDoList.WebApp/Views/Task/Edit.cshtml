@@ -1,0 +1,29 @@
+﻿@using ToDoList.WebApp.Models.ViewModels.TaskViewModels
+@model UpdateTaskViewModel
+
+<div class="col-6">
+    <form method="post" class="col-6 m-1 border" asp-route-title="Title" asp-route-description="Description">
+        <label asp-for="Title"></label>
+        <input type="text" asp-for="Title" />
+        <span class="text-danger" asp-validation-for="Title"></span>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description"></textarea>
+        <span class="text-danger" asp-validation-for="Description"></span>
+        <label asp-for="EndDate"></label>
+        <input type="datetime-local" asp-for="EndDate" />
+        <span class="text-danger" asp-validation-for="EndDate"></span>
+        <label asp-for="PriorityList"></label>
+        <select asp-for="PriorityList" asp-items="@Html.GetEnumSelectList<Todo.Domain.Entities.TodoTaskStatus.Priority>()">
+            <option selected="selected">Select</option>
+        </select>
+        <span class="text-danger" asp-validation-for="PriorityList"></span>
+        <label asp-for="StatusList"></label>
+        <select asp-for="StatusList" asp-items="@Html.GetEnumSelectList<Todo.Domain.Entities.TodoTaskStatus.TaskStatus>()">
+            <option>Select</option>
+        </select>
+        <div class="d-flex col-6">
+        <button type="submit" class="btn btn-success m-1" asp-action="Edit">Update</button>
+        <a class="btn btn-danger m-1" asp-controller="List" asp-action="Index">Back</a>
+    </div>
+    </form>
+</div>

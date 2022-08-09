@@ -1,0 +1,29 @@
+﻿@using ToDoList.WebApp.Models.ViewModels
+@model RegisterAccountViewModel
+
+<div class="col-9 m-2">
+    <form method="post" class="border p-2">
+        <div class="text-danger" asp-validation-summary="All"></div>
+        <div class="form-group">
+            <label asp-for="UserName"></label>
+            <input type="text" asp-for="UserName"/>
+            <span class="text-danger" asp-validation-for="UserName"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input type="text" asp-for="Email" placeholder="myEmail@example.com"/>
+            <span class="text-danger" asp-validation-for="Email"></span>
+       </div>
+       <div class="form-group">
+            <label asp-for="Password"></label>
+            <input type="password" asp-for="Password"/>
+            <span class="text-danger" asp-validation-for="Password"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ConfirmedPassword"></label>
+            <input type="password" asp-for="ConfirmedPassword"/>
+            <span class="text-danger" asp-validation-for="ConfirmedPassword"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>

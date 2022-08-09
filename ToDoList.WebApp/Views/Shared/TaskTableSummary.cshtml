@@ -1,0 +1,35 @@
+﻿@using Todo.Domain.Entities
+@model IEnumerable<TodoTask>
+
+
+<table class="table table-bordered table-striped m-1 text-center">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>End at</th>
+            <th>Created at</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+        <tbody>
+           @foreach (var task in Model)
+           {
+                <tr>
+                  <td>@task.Title</td>
+                  <td>@task.Description</td>
+                   <td>@task.Priority</td>
+                   <td>@task.Status</td>
+                   <td>@task.EndDate</td>
+                   <td>@task.CreatedDate</td>
+                   <td>
+                      <a class="bi bi-binoculars-fill text-primary" asp-controller="Task" asp-action="Detail" asp-route-id="@task.Id" title="Details"></a>
+                      <a class="bi bi-pen-fill text-success" asp-controller="Task" asp-action="Edit" asp-route-id="@task.Id" title="Edit"></a>
+                      <a class="bi bi-trash-fill text-danger" asp-controller="Task" asp-action="Delete" asp-route-id="@task.Id" title="Remove"></a>
+                   </td>
+               </tr>
+             }
+    </tbody>
+</table>

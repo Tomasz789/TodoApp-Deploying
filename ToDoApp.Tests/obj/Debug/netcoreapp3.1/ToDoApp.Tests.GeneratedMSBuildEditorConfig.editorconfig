@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = ToDoApp.Tests
+build_property.ProjectDir = D:\Projekty\ToDoList.WebApp\ToDoApp.Tests\

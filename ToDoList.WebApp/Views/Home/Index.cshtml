@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Todo.Domain.Entities
+@inject SignInManager<Microsoft.AspNetCore.Identity.IdentityUser> signInManager;
+@model IEnumerable<TodoList>
+
+@{
+    ViewData["Title"] = "Todoapp - create useful task lists";
+}
+
+@if (!signInManager.IsSignedIn(User))
+{
+    <partial name="StartPage" />
+}
+else {
+    <div class="col-12 text-center m-1 p-2">
+        <h1>Hello, <span class="text-warning">@User.Identity.Name!</span></h1>
+        <h2>Nice to see <span class="text-primary">You</span> again!</h2>
+        <p>Today is <strong class="text-success"> @DateTime.Now.Date.DayOfWeek </strong>, @string.Format(@DateTime.Now.ToString(), "dd-mm-yyyy")</p>
+    </div>
+    <div class="col-12 text-center">
+        @if (@Model.Any())
+        {
+            @foreach (var t in @Model)
+            {
+                <partial name="StartPageTasksListSummary" model="@t"/>
+            }
+        }
+        else {
+            <h3>No important tasks - maybe add something?</h3>
+        }
+    </div>
+}

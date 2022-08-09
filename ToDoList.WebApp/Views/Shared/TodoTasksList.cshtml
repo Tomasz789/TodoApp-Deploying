@@ -1,0 +1,9 @@
+﻿@using Todo.Domain.Entities
+@model TodoTask
+
+<div class="card col-6 m-2">
+    <div class="card-body col-5">
+        <p>@Model.Title</p>
+    </div>
+    <div class="card col-1 bg-danger"><p>@Model.CreatedDate</p></div>
+</div>

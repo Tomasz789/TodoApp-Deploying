@@ -1,0 +1,14 @@
+﻿@using Todo.Domain.Entities
+@model TodoTask
+@{
+    ViewData["Title"] = "Remove task";
+}
+<div class="col-12 text-center">
+    <h1>Remove task @Model.Title.</h1>
+    <form class="border" method="post">
+        <h2><span class="text-danger">Caution!&nbsp;</span>Your task will definitely deleted.</h2>
+        <p>Continue?</p>
+        <button class="btn btn-danger mb-1" asp-action="RemoveConfirmation" asp-controller="Task" asp-route-id="@Model.Id">Yes, remove</button>
+        <a class="btn btn-success mb-1" asp-controller="List" asp-action="Index">Take me back</a>
+    </form>
+</div>

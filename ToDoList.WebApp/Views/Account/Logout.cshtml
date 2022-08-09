@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Logged out.";
+}
+
+<div class="container justify-content-center">
+    <h1>You are signed out.</h1>
+    <p>Click Sign in to login again.</p>
+    <div class="btn btn-group">
+        <a class="btn btn-primary m-5" asp-controller="Account" asp-action="Login">Sign in</a>
+        <a class="btn btn-success m-5" asp-controller="Home" asp-action="Index">Home page</a>
+    </div>
+</div>

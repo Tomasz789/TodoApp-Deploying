@@ -1,0 +1,36 @@
+﻿@using ToDoList.WebApp.Models.ViewModels.TaskViewModels
+@using Todo.Domain.Entities.TodoTaskStatus
+
+@model CreateTaskViewModel
+
+@{
+    ViewData["Title"] = "Create new task";
+}
+
+<h1>Add new task here:</h1>
+
+<div class="col-6">
+    <form method="post" class="col-6 m-1 border" asp-route-title="Title" asp-route-description="Description">
+        <input type="hidden" asp-for=ListId />
+        <label asp-for="Title"></label>
+        <input type="text" asp-for="Title" />
+        <span class="text-danger" asp-validation-for="Title"></span>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description"></textarea>
+        <span class="text-danger" asp-validation-for="Description"></span>
+        <label asp-for="EndDate"></label>
+        <input type="datetime-local" asp-for="EndDate" />
+        <span class="text-danger" asp-validation-for="EndDate"></span>
+        <label asp-for="PriorityList"></label>
+        <select asp-for="PriorityList" asp-items="@Html.GetEnumSelectList<Priority>()">
+            <option selected="selected">Select</option>
+        </select>
+        <span class="text-danger" asp-validation-for="PriorityList"></span>
+        <label asp-for="StatusList"></label>
+        <select asp-for="StatusList" asp-items="@Html.GetEnumSelectList<Todo.Domain.Entities.TodoTaskStatus.TaskStatus>()">
+            <option>Select</option>
+        </select>
+        <button type="submit" class="btn btn-success" asp-controller="Task" asp-action="Create">Create</button>
+        <a class="btn btn-danger" asp-controller="List" asp-action="Index">Cancel</a>
+    </form>
+</div>
