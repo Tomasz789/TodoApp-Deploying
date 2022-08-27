@@ -1,0 +1,14 @@
+﻿@using Todo.Domain.Entities
+@model Note
+@{
+    ViewData["Title"] = "Remove note";
+}
+<div class="col-12 text-center">
+    <h1>Remove the note @Model.Title.</h1>
+    <form class="border" method="post">
+        <h2><span class="text-danger">Caution!&nbsp;</span>Your note will be definitely deleted.</h2>
+        <p>Continue?</p>
+        <button class="btn btn-danger mb-1" asp-action="DeleteConfirmation" asp-controller="Note" asp-route-id="@Model.Id">Yes, remove</button>
+        <a class="btn btn-success mb-1" asp-controller="Note" asp-action="Index">Take me back</a>
+    </form>
+</div>

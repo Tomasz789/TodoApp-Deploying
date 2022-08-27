@@ -1,0 +1,31 @@
+﻿@using Todo.Domain.Entities
+@using System.Collections.Generic
+@model IQueryable<Note>
+
+@{
+    ViewData["Title"] = "Notes";
+}
+
+
+<div class="col-12 m-1">
+    <div class="col-3 m-1" style="float:left">
+    </div>
+
+    <div class="col-9 m-6">
+        @if (!Model.Any())
+        {
+            <h1>
+                It's so empty here..
+                <a asp-action="Create" asp-controller="Note" class="text-success">Add a note!</a>
+            </h1>
+        }
+        else
+        {
+            <a asp-action="Create" asp-controller="Note" class="btn btn-primary">Add a note!</a>
+            @foreach (var m in Model)
+            {
+                <partial name="NoteCardViewSummary" model="m" />
+            }
+        }
+    </div>
+</div>

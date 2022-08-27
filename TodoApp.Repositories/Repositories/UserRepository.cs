@@ -8,7 +8,7 @@ using TodoApp.DAL.RepositoryContracts;
 
 namespace TodoApp.Repositories.Repositories
 {
-    public class UserRepository : RepositoryBase<IdentityUser>, IUserRepository
+    public class UserRepository : RepositoryBase<AppUser>, IUserRepository
     {
         public UserRepository(AppDatabaseContext context) : base(context)
         {

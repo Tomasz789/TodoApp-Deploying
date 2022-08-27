@@ -337,7 +337,6 @@ D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\Tod
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.DAL.pdb
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.Repositories.pdb
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.DataVerifier.pdb
-D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.csprojAssemblyReference.cache
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.AssemblyInfoInputs.cache
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.AssemblyInfo.cs
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.csproj.CoreCompileInputs.cache
@@ -345,8 +344,6 @@ D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToD
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.RazorAssemblyInfo.cache
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.RazorAssemblyInfo.cs
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\staticwebassets\ToDoList.WebApp.StaticWebAssets.Manifest.cache
-D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\staticwebassets\ToDoList.WebApp.StaticWebAssets.xml
-D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\ToDoList.WebApp.styles.css
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.TagHelpers.input.cache
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.TagHelpers.output.cache
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.RazorCoreGenerate.cache
@@ -387,3 +384,14 @@ D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToD
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.dll
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.pdb
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.genruntimeconfig.cache
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.csproj.AssemblyReference.cache
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\ToDoList.WebApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\EntityFramework.dll
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.Core.dll
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Note\Index.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\NoteCardViewSummary.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Note\Create.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Note\Edit.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Note\Delete.cshtml.g.cs

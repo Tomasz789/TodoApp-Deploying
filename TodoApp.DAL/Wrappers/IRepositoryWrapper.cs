@@ -13,6 +13,8 @@ namespace TodoApp.DAL.Wrappers
 
         ITodoTaskRepository TodoTaskRepository { get; }
 
+        INoteRepository NoteRepository { get; }
+
         void Save();
     }
 }

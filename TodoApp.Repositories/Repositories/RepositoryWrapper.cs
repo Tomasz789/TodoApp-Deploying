@@ -13,6 +13,8 @@ namespace TodoApp.Repositories.Repositories
         private IUserRepository userRepository;
         private ITodoListRepository listRepository;
         private ITodoTaskRepository todoTaskRepository;
+        private INoteRepository noteRepository;
+        private IShoppingListRepository shoppingListRepository;
 
         public RepositoryWrapper(AppDatabaseContext context)
         {
@@ -57,6 +59,31 @@ namespace TodoApp.Repositories.Repositories
             }
         }
 
+        public INoteRepository NoteRepository 
+        {
+            get
+            {
+                if (noteRepository == null)
+                {
+                    noteRepository =  new NoteRepository(context);
+                }
+
+                return noteRepository;
+            }
+        }
+
+        public IShoppingListRepository ShoppingListRepository
+        {
+            get
+            {
+                if (shoppingListRepository == null)
+                {
+                    shoppingListRepository = new ShoppingListRepository(context);
+                }
+
+                return shoppingListRepository;
+            }
+        }
         public void Save()
         {
             this.context.SaveChanges();

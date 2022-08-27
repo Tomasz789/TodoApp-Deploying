@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Todo.Domain.Entities;
 using TodoApp.DAL.Wrappers;
@@ -18,9 +19,9 @@ namespace ToDoList.WebApp.Controllers
     public class ListController : Controller
     {
         private readonly IRepositoryWrapper repository;
-        private readonly SignInManager<Microsoft.AspNetCore.Identity.IdentityUser> signInManager;
-        private readonly UserManager<Microsoft.AspNetCore.Identity.IdentityUser> userManager;
-        public ListController(IRepositoryWrapper repository, UserManager<Microsoft.AspNetCore.Identity.IdentityUser> userManager, SignInManager<Microsoft.AspNetCore.Identity.IdentityUser> signInManager)
+        private readonly SignInManager<AppUser> signInManager;
+        private readonly UserManager<AppUser> userManager;
+        public ListController(IRepositoryWrapper repository, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
             this.repository = repository;
             this.signInManager = signInManager;
@@ -28,11 +29,13 @@ namespace ToDoList.WebApp.Controllers
         }
 
         //GET:
-        public ViewResult Index(SortListViewModel vm, int page = 1, int itemsPerPage = 5, string sortOrder = "asc", string SearchString = "")
+        [Authorize]
+        public ViewResult Index(SortListViewModel vm, int page = 1, int itemsPerPage = 10, string sortOrder = "asc", string SearchString = "")
         {
             ViewBag.CreatedDateSortParam = string.IsNullOrEmpty(sortOrder) ? "asc" : "desc";
             ViewBag.UpdatedDateSortParam = string.IsNullOrEmpty(sortOrder) ? "updated_asc" : "updated_desc";
-            var lists = repository.TodoListRepository.GetAll().Include(y => y.Tasks).Skip((page - 1) * itemsPerPage).Take(itemsPerPage);
+            var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var lists = repository.TodoListRepository.GetByCondition(u => u.UserId == userId).Include(y => y.Tasks).Skip((page - 1) * itemsPerPage).Take(itemsPerPage);
             lists = lists.Where(x => x.CreatedDate >= vm.CreatedDateMin && x.CreatedDate <= vm.CreatedDateMax);
 
             if (!string.IsNullOrEmpty(SearchString))
@@ -102,6 +105,7 @@ namespace ToDoList.WebApp.Controllers
         // POST:
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public IActionResult Create(CreateTaskListViewModel vm)
         {
             if (!ModelState.IsValid)
@@ -109,19 +113,25 @@ namespace ToDoList.WebApp.Controllers
                 return View(vm);
             }
 
-            var list = new TodoList(vm.Title, vm.Description);
+            var listUserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var list = new TodoList()
+            {
+                Title = vm.Title,
+                Description = vm.Description,
+                UserId = listUserId,
+            };
             this.repository.TodoListRepository.Create(list);
             this.repository.Save();
-            return RedirectToAction("Index");
+            return  RedirectToAction("Index");
         }
 
         [HttpPost]
         public IActionResult Edit(int? id, UpdateTaskListViewModel vm)
         {
             var listToUpdate = repository.TodoListRepository.GetOneByCondition(x => x.Id == id);
-            listToUpdate.SetDescription(vm.Description);
-            listToUpdate.SetTitle(vm.Title);
-
+            listToUpdate.Description = vm.Description;
+            listToUpdate.Title = vm.Title;
+            
             repository.TodoListRepository.Update(listToUpdate);
             repository.Save();
             return RedirectToAction("Index");

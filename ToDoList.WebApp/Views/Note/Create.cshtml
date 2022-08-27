@@ -1,0 +1,16 @@
+﻿@using ToDoList.WebApp.Models.ViewModels
+@model CreateNoteViewModel
+
+<div class="col-10 border text-center">
+    <h1>Create a note</h1>
+    <form method="post">
+        <label asp-for="Title"></label>
+        <input type="text" asp-for="Title" />
+        <span class="text-danger" asp-validation-for="Title"></span>
+        <label asp-for="Text">Content of note:</label>
+        <textarea asp-for="Text"></textarea>
+        <span asp-validation-for="Text" class="text-danger"></span>
+        <button type="submit" class="btn btn-success">Add</button>
+        <a class="btn btn-danger m-1" asp-action="Index" asp-controller="Note">Cancel</a>
+    </form>
+</div>

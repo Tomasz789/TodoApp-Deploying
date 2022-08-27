@@ -24,10 +24,11 @@ D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\bin\Debug\netcoreapp3.
 D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\bin\Debug\netcoreapp3.1\Todo.Domain.Entities.pdb
 D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\bin\Debug\netcoreapp3.1\TodoApp.DAL.pdb
 D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\bin\Debug\netcoreapp3.1\TodoApp.DataVerifier.pdb
-D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\obj\Debug\netcoreapp3.1\TodoApp.Repositories.csprojAssemblyReference.cache
 D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\obj\Debug\netcoreapp3.1\TodoApp.Repositories.AssemblyInfoInputs.cache
 D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\obj\Debug\netcoreapp3.1\TodoApp.Repositories.AssemblyInfo.cs
 D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\obj\Debug\netcoreapp3.1\TodoApp.Repositories.csproj.CoreCompileInputs.cache
 D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\obj\Debug\netcoreapp3.1\TodoApp.Repositories.csproj.CopyComplete
 D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\obj\Debug\netcoreapp3.1\TodoApp.Repositories.dll
 D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\obj\Debug\netcoreapp3.1\TodoApp.Repositories.pdb
+D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\obj\Debug\netcoreapp3.1\TodoApp.Repositories.csproj.AssemblyReference.cache
+D:\Projekt\aspnet-core-final-project\TodoApp.Repositories\obj\Debug\netcoreapp3.1\TodoApp.Repositories.GeneratedMSBuildEditorConfig.editorconfig

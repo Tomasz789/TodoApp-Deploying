@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Todo.Domain.Entities;
 using TodoApp.DAL.Wrappers;
 using ToDoList.WebApp.Models;
 using ToDoList.WebApp.Models.ViewModels;
@@ -11,10 +12,10 @@ namespace ToDoList.WebApp.Controllers
     public class AccountController : Controller
     {
         private readonly IRepositoryWrapper repositoryWrapper;
-        private readonly UserManager<IdentityUser> userManager;
-        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<AppUser> userManager;
+        private readonly SignInManager<AppUser> signInManager;
 
-        public AccountController(IRepositoryWrapper wrapper, UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public AccountController(IRepositoryWrapper wrapper, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
             repositoryWrapper = wrapper;
             this.userManager = userManager;
@@ -34,7 +35,8 @@ namespace ToDoList.WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser() { UserName = vm.UserName, Email = vm.Email };
+                var user = new AppUser() { UserName = vm.UserName, Email = vm.Email};
+              
                 var result = await userManager.CreateAsync(user, vm.Password);
 
                 if (result.Succeeded)

@@ -10,12 +10,12 @@ namespace TodoApp.Testing
     [TestFixture]
     public class UserEntityTests
     {
-        private IdentityUser user;
+        private AppUser user;
 
         [SetUp]
         public void Init()
         {
-            user = new IdentityUser(Guid.NewGuid(), "User1", "user1@example.com", "mYPasswRd33!");
+           // user = new IdentityUser(Guid.NewGuid(), "User1", "user1@example.com", "mYPasswRd33!");
         }
 
         [TestCase("---aabbcc,", ExpectedResult = false)]
@@ -62,13 +62,6 @@ namespace TodoApp.Testing
             return expected;
         }
 
-
-        [Test]
-        public void EmailInvalidThrowsArgumentException()
-        {
-            Assert.Throws<ArgumentException>(() => user.SetUserEmail("Ad--cvb@gmail.com"));
-        }
-
         [Test]
         public void ExampleUserCreatedSuccessfully()
         {
@@ -77,13 +70,13 @@ namespace TodoApp.Testing
             string email = "myTestUser15@test.com";
             var id = Guid.NewGuid();
 
-            var newUser = new IdentityUser(id, username, email, password);
+            var newUser = new AppUser();
 
             Assert.NotNull(newUser);
             Assert.AreEqual(id, newUser.Id);
             Assert.AreEqual(username, newUser.UserName);
             Assert.AreEqual(email, newUser.Email);
-            Assert.AreEqual(password, newUser.Password);
+            Assert.AreEqual(password, newUser.PasswordHash);
         }
     }
 }

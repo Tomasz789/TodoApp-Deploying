@@ -1,0 +1,51 @@
+﻿@using Todo.Domain.Entities
+@model Note
+<h1 id="h1">a</h1>
+<card class="card col-6 row-6" id="noteCard">
+    <card class="card-header" style="color:rgb(230, 0, 0); font-size:30px">
+        @Model.Title
+    </card>
+    <card class="card-body" id="noteContent">
+        @Model.Text
+        <abp-modal>a</abp-modal>
+    </card>
+    <card class="card-footer">
+        @Model.CreatedDate
+    </card>
+    <card class="card-footer">
+        <div class="btn btn-group">
+            <a class="text-success m-2" asp-action="Edit" asp-controller="Note" asp-route-id="@Model.Id"><i class="bi bi-pen-fill"></i></a>
+            <a class="text-danger m-2" asp-action="Delete" asp-controller="Note" asp-route-id="@Model.Id"><i class="bi bi-trash"></i></a>
+        </div>
+    </card>
+</card>
+
+
+<style>
+    #noteCard{
+        background: rgb(255, 255, 153);
+        border: 2px solid black;
+        text-align: center;
+        border-radius: 4px;
+        font-family:"Brush Script MT", cursive;
+        font-weight: 100;
+        font-size: 24px;
+        color: rgb(0, 38, 153);
+        box-shadow: 7px 7px lightgrey;
+    }
+</style>
+
+<script>
+    var noteContentItem = document.getElementById("noteContent");
+    var text = noteContentItem.textContent;//document.getElementById("moreCmd").textContent;
+    console.log(text);
+    var moreCmdItem = document.createElement("p");
+
+    if (text.length > 1){
+        moreCmdItem.append("More...");
+        noteContentItem.appendChild(moreCmdItem);
+    }
+    moreCmdItem.onclick = function(){
+        console.log(text);
+    }
+</script>

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
+using Todo.Domain.Entities.MainEntity;
 using Todo.Domain.Entities.TodoTaskStatus;
 using TodoApp.DataVerifier;
 
 namespace Todo.Domain.Entities
 {
-    public class TodoTask
+    public class TodoTask : Main
     {
         public TodoTask(string title, string description, DateTime endDate, TaskStatus status)
         {
@@ -24,15 +25,7 @@ namespace Todo.Domain.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public string Title { get; private set; }
-
-        public string Description { get; set; }
-
-        public DateTime CreatedDate { get; private set; }
-
         public DateTime EndDate { get; private set; }
-
-        public DateTime Updated { get; set; }
 
         public TaskStatus Status { get; set; }
 

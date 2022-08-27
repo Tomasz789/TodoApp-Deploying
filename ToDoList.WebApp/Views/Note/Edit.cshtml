@@ -1,0 +1,20 @@
+﻿@using ToDoList.WebApp.Models.ViewModels
+@model UpdateNoteViewModel
+
+@{
+    ViewData["Title"] = "Update note";
+}
+
+<div class="col-12 text-center">
+    <h1>Edit the note</h1>
+     <form class="col-12" method="post">
+          <label asp-for="Title"></label> <br />
+          <input class="col-10 row-3" type="text" asp-for="Title" />
+          <span class="text-danger" asp-validation-for="Title"></span>
+          <label asp-for="Text">Content of note:</label>
+          <textarea class="col-10 row-5" asp-for="Text"></textarea>
+          <span asp-validation-for="Text" class="text-danger"></span>
+          <button type="submit" class="btn btn-success">Save</button>
+          <a class="btn btn-danger m-1" asp-action="Index" asp-controller="Note">Cancel</a>
+     </form>
+</div>

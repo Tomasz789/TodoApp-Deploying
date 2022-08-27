@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,24 +11,29 @@ using Todo.Domain.Entities;
 
 namespace TodoApp.DAL.DataContext
 {
-    public class AppDatabaseContext : IdentityDbContext
+    public class AppDatabaseContext : IdentityDbContext<AppUser, AppUserRole, Guid>
     {
         public AppDatabaseContext(DbContextOptions<AppDatabaseContext> contextOptions) : base(contextOptions)
         {
 
         }
 
-       // public DbSet<User> Users { get; set; }
+        public DbSet<Note> Notes { get; set; }
+
         public DbSet<TodoList> TodoLists { get; set; }
 
+        public DbSet<ShoppingList> ShoppingLists { get; set; }
+
+        public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<TodoTask> Tasks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<TodoList>().HasMany(t => t.Tasks).WithOne(t => t.TodoList).HasForeignKey(t => t.TaskListId);
-            modelBuilder.Entity<IdentityUser>().HasMany(t => t.TodoLists).WithOne(t => t.User);
-            //modelBuilder.Seed();
+            modelBuilder.Entity<AppUser>().HasMany(t => t.TodoLists).WithOne(t => t.User).HasForeignKey(t => t.UserId);
+            modelBuilder.Entity<AppUser>().HasMany(n => n.Notes).WithOne(u => u.User).HasForeignKey(t => t.UserId);
+            modelBuilder.Entity<AppUser>().HasMany(s => s.ShoppingLists).WithOne(u => u.User).HasForeignKey(t => t.UserId);
         }
     }
 }

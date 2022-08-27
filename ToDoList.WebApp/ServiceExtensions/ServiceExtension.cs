@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Todo.Domain.Entities;
 using TodoApp.DAL.DataContext;
 using TodoApp.DAL.Wrappers;
 using TodoApp.Repositories.Repositories;
@@ -43,7 +44,7 @@ namespace ToDoList.WebApp.ServiceExtension
         /// <param name="services">Extension for IServiceCollection.</param>
         public static void ConfigureIdentity(this IServiceCollection services)
         {
-            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDatabaseContext>();
+            services.AddIdentity<AppUser, AppUserRole>().AddEntityFrameworkStores<AppDatabaseContext>();
         }
 
         public static void ConfigureAuthorization(this IServiceCollection services)
