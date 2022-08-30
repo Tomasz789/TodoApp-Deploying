@@ -20,7 +20,7 @@
 <div page-model="@Model.PagingInfo" page-action="Index" page-classes-enabled="true"
      page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-success"
      class="btn-group pull-right m-1">
-    @for (var @b = 1; b < @Model.PagingInfo.TotalItems; ++@b)
+    @for (var @b = 1; b < @Model.PagingInfo.TotalPages; ++@b)
     {
         <a asp-action="Index" asp-controller="List" asp-route-page="@b" class="btn btn-outline-success">@b</a>
     }

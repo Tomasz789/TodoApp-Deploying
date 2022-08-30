@@ -395,3 +395,9 @@ D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Raz
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Note\Create.cshtml.g.cs
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Note\Edit.cshtml.g.cs
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Note\Delete.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\ShoppingListSummary.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingList\Index.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingList\Create.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingList\Edit.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\NoteSearchPartialView.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\List\Stats.cshtml.g.cs

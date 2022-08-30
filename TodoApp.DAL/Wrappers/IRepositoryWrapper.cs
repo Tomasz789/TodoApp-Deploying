@@ -15,6 +15,8 @@ namespace TodoApp.DAL.Wrappers
 
         INoteRepository NoteRepository { get; }
 
+        IShoppingListRepository ShoppingListRepository { get; }
+
         void Save();
     }
 }

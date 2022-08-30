@@ -80,6 +80,18 @@ namespace ToDoList.WebApp.Controllers
             });
         }
 
+        public IActionResult Stats()
+        {
+            var tasks = repository.TodoTaskRepository.GetAll();
+
+            return View(new TaskStatsViewModel()
+            {
+                TasksCount = tasks.Count(),
+                TasksDoneCount = tasks.Where(x => x.Status.Equals(Todo.Domain.Entities.TodoTaskStatus.TaskStatus.Completed)).Count(),
+                TasksInProgressCount = tasks.Where(x => x.Status.Equals(Todo.Domain.Entities.TodoTaskStatus.TaskStatus.InProgress)).Count(),
+                TasksNotStarted = tasks.Where(x => x.Status.Equals(Todo.Domain.Entities.TodoTaskStatus.TaskStatus.NotStarted)).Count(),
+            });
+        }
         public IActionResult Create()
         {
             return View();

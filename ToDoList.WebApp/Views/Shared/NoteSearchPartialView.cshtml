@@ -1,0 +1,23 @@
+﻿@model SearchNoteViewModel
+
+<div>
+    @using(Html.BeginForm())
+    {
+        <p>
+            Search by title @Html.TextBox("NoteTitle") 
+            <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
+        </p>
+    }
+    <form class="form-group" method="post">
+        <label asp-for="CreatedDateFrom"></label>
+        <input type="datetime-local" asp-for="CreatedDateFrom" />
+        <label asp-for="CreatedDateTo"></label><br />
+        <input type="datetime-local" asp-for="CreatedDateTo" /> <br />
+        <label asp-for="OrderType"></label>
+        <select asp-for="OrderType">
+            <option>Ascending</option>
+            <option>Descending</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>

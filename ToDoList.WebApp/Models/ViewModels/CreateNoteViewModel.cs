@@ -11,7 +11,7 @@ namespace ToDoList.WebApp.Models.ViewModels
 
         [Required]
         [Display(Name ="Content")]
-        [MaxLength(255, ErrorMessage ="Maximum length: 4096 characters.")]
+        [MaxLength(4096, ErrorMessage ="Maximum length: 4096 characters.")]
 
         public string Text { get; set; }
     }

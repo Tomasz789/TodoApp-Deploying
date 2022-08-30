@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 using System.Security.Claims;
 using Todo.Domain.Entities;
 using TodoApp.DAL.Wrappers;
+using ToDoList.WebApp.Models;
 using ToDoList.WebApp.Models.ViewModels;
 
 namespace ToDoList.WebApp.Controllers
@@ -17,9 +19,29 @@ namespace ToDoList.WebApp.Controllers
         }
 
         [Authorize]
-        public IActionResult Index()
+        public IActionResult Index(SearchNoteViewModel vm, string NoteTitle = "", string NoteOrder = "")
         {
             var model = _repo.NoteRepository.GetAll();
+            model = model.Where(x => x.CreatedDate >= vm.CreatedDateFrom && x.CreatedDate <= vm.CreatedDateTo);
+
+            if (!string.IsNullOrEmpty(NoteTitle))
+            {
+                model = model.Where(t => t.Title == NoteTitle);
+            }
+
+            switch (vm.OrderType)
+            {
+                case "Ascending":
+                    {
+                        model = model.OrderBy(x => x.CreatedDate);
+                    }
+                    break;
+                case "Descending":
+                    {
+                        model = model.OrderByDescending(x => x.CreatedDate);
+                    }
+                    break;
+            }
             return View(model);
         }
 

@@ -1,0 +1,13 @@
+﻿@using Todo.Domain.Entities
+@model ShoppingList
+
+<div class = "card col-6">
+    <div class="card-body">
+        <p>@Model.Title</p>
+        <hr />
+        @Model.Description
+    </div>
+    <div class="card-footer">
+        @Model.DueDate.ToShortDateString()
+    </div>
+</div>

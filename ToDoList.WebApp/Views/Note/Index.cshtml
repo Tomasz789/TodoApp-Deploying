@@ -7,11 +7,12 @@
 }
 
 
-<div class="col-12 m-1">
-    <div class="col-3 m-1" style="float:left">
+<div class="d-flex col-12">
+    <div class="col-3" style="float:left">
+        <partial name="NoteSearchPartialView" model="new SearchNoteViewModel()" />
     </div>
 
-    <div class="col-9 m-6">
+    <div class="col-9 m-6 text-center">
         @if (!Model.Any())
         {
             <h1>

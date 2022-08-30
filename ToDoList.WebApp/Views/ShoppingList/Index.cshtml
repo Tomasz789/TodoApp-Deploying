@@ -1,0 +1,20 @@
+﻿@using Todo.Domain.Entities
+@model IQueryable<ShoppingList>
+
+@{
+    ViewData["Title"] = "Shopping lists.";
+}
+
+<div class="col-12">
+    <div class="col-4" style="float:left"></div>
+    <div class="col-8">
+        @if (!@Model.Any()){
+            <h1>No shopping list found..</h1>
+            <a asp-action="Create" asp-controller="ShoppingList" class="btn btn-success">Add new!</a>
+        }
+        @foreach (var list in @Model)
+        {
+            <partial name="ShoppingListSummary" model="list" />
+        }
+    </div>
+</div>

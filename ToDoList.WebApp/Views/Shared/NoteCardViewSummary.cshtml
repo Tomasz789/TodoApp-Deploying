@@ -1,13 +1,12 @@
 ﻿@using Todo.Domain.Entities
 @model Note
-<h1 id="h1">a</h1>
-<card class="card col-6 row-6" id="noteCard">
+
+<card class="card col-6 row-6 m-10" id="noteCard">
     <card class="card-header" style="color:rgb(230, 0, 0); font-size:30px">
         @Model.Title
     </card>
     <card class="card-body" id="noteContent">
         @Model.Text
-        <abp-modal>a</abp-modal>
     </card>
     <card class="card-footer">
         @Model.CreatedDate
