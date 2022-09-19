@@ -340,3 +340,5 @@ D:\Projekt\aspnet-core-final-project\TodoApp.Testing\bin\Debug\netcoreapp3.1\Ent
 D:\Projekt\aspnet-core-final-project\TodoApp.Testing\bin\Debug\netcoreapp3.1\EntityFramework.dll
 D:\Projekt\aspnet-core-final-project\TodoApp.Testing\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.Core.dll
 D:\Projekt\aspnet-core-final-project\TodoApp.Testing\bin\Debug\netcoreapp3.1\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projekt\aspnet-core-final-project\TodoApp.Testing\bin\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.dll
+D:\Projekt\aspnet-core-final-project\TodoApp.Testing\bin\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.pdb

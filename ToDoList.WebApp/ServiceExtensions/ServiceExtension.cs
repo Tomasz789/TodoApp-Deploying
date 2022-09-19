@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Todo.Domain.Entities;
+using TodoApp.CurrencyHelper.Services;
 using TodoApp.DAL.DataContext;
 using TodoApp.DAL.Wrappers;
 using TodoApp.Repositories.Repositories;
@@ -66,6 +67,11 @@ namespace ToDoList.WebApp.ServiceExtension
                 opt.Cookie.HttpOnly = true;
                 opt.Cookie.IsEssential = true;
             });
+        }
+
+        public static void ConfigureExternServices(this IServiceCollection services)
+        {
+            services.AddTransient<ICurrencyExchangeService, CurrencyExchangeService>();
         }
     }
 }

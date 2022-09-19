@@ -1079,7 +1079,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -2831,6 +2831,19 @@
         },
         "runtime": {
           "bin/placeholder/Todo.Domain.Entities.dll": {}
+        }
+      },
+      "TodoApp.CurrencyHelper/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "bin/placeholder/TodoApp.CurrencyHelper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TodoApp.CurrencyHelper.dll": {}
         }
       },
       "TodoApp.DAL/1.0.0": {
@@ -4614,10 +4627,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4640,8 +4653,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "NuGet.Frameworks/4.7.0": {
@@ -9206,6 +9220,11 @@
       "path": "../Todo.Domain.Entities/Todo.Domain.Entities.csproj",
       "msbuildProject": "../Todo.Domain.Entities/Todo.Domain.Entities.csproj"
     },
+    "TodoApp.CurrencyHelper/1.0.0": {
+      "type": "project",
+      "path": "../TodoApp.CurrencyHelper/TodoApp.CurrencyHelper.csproj",
+      "msbuildProject": "../TodoApp.CurrencyHelper/TodoApp.CurrencyHelper.csproj"
+    },
     "TodoApp.DAL/1.0.0": {
       "type": "project",
       "path": "../TodoApp.DAL/TodoApp.DAL.csproj",
@@ -9229,6 +9248,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.14",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5",
       "Todo.Domain.Entities >= 1.0.0",
+      "TodoApp.CurrencyHelper >= 1.0.0",
       "TodoApp.DAL >= 1.0.0",
       "TodoApp.Repositories >= 1.0.0"
     ]
@@ -9270,6 +9290,9 @@
           "projectReferences": {
             "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
               "projectPath": "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
+            },
+            "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {
+              "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj"
             },
             "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj": {
               "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj"

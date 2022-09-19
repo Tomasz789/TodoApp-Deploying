@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Todo.Domain.Entities.Budgets;
 
 namespace Todo.Domain.Entities
 {
@@ -31,5 +32,9 @@ namespace Todo.Domain.Entities
         public IQueryable<Note> Notes { get; set; }
 
         public IQueryable<ShoppingList> ShoppingLists { get; set; }
+
+        public IQueryable<Income> Incomes { get; set; }
+
+        public IQueryable<Expense> Expenses { get; set; }
     }
 }

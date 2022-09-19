@@ -1,0 +1,56 @@
+﻿@using ToDoList.WebApp.Models.ViewModels.BudgetViewModels
+@model BudgetSummaryViewModel
+
+<div class="container">
+    <div class="d-flex d-inline-flex m-2 align-content-center">
+        <partial name="AddExpense" model="new ExpenseViewModel()" />
+        <partial name="AddIncome" model="new IncomeViewModel()" />
+    </div>
+    <div>
+        <h1>Budget summary</h1>
+        <p>Total incomes: @Model.TotalIncomes</p>
+        <p>Total expenses: @Model.TotalExpenses</p>
+        <div id="budgetPieChart" style="width:500px; height:500px"></div>
+        <div id="budgetDonutChart" style="width:500px; height:500px"></div>
+   </div>
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart(){
+            var data = google.visualization.arrayToDataTable([
+                ['Budget', 'Price'],
+                ['Incomes',  parseInt(@Model.TotalIncomes)], 
+                ['Expenses',parseInt(@Model.TotalExpenses)], 
+            ]
+        );
+
+        var options = {title: 'Incomes and Expenses', width:'90%', height:'100%', chartArea: {width: '500px', height: '500px'}};
+        var chart = new google.visualization.PieChart(document.getElementById('budgetPieChart'));
+        chart.draw(data, options);
+    }
+
+    function drawDonutChartForTotal(){
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Budget');
+            data.addColumn('number', 'Value');
+            data.addRows([
+                ['Incomes', parseInt(@Model.TotalIncomes)],
+                ['Expenses', parseInt(@Model.TotalExpenses)]
+            ]);
+
+            var donutChartOpts = {
+            'title':'Incomes and Expenses - values',
+            'width':'500px',
+            'height':'500px',
+            pieHole:0.5
+         };
+
+        var donutChart = new google.visualization.PieChart(document.getElementById('budgetDonutChart'));
+        donutChart.draw(data, donutChartOpts);
+     }
+     google.charts.setOnLoadCallback(drawDonutChartForTotal);
+</script>

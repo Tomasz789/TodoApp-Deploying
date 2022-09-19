@@ -17,6 +17,10 @@ namespace TodoApp.DAL.Wrappers
 
         IShoppingListRepository ShoppingListRepository { get; }
 
+        IIncomeRepository IncomeRepository { get; }
+
+        IExpenseRepository ExpenseRepository { get; }
+
         void Save();
     }
 }

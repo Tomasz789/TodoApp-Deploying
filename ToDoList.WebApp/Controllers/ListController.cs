@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -72,7 +75,6 @@ namespace ToDoList.WebApp.Controllers
                     break;
             }
 
-
             return View(new TaskListsPagingViewModel()
             {
                 Lists = lists,
@@ -80,17 +82,25 @@ namespace ToDoList.WebApp.Controllers
             });
         }
 
-        public IActionResult Stats()
+        public IActionResult Stats(int? listId)
         {
             var tasks = repository.TodoTaskRepository.GetAll();
-
+            var lists = repository.TodoListRepository.GetAll();
+            var selected = new List<SelectListItem>();
+            
+            foreach (var list in lists)
+            {
+                selected.Add(new SelectListItem() { Text = list.Title, Value = list.Id.ToString() });
+            }
+            ViewBag.UserLists = selected;
             return View(new TaskStatsViewModel()
             {
                 TasksCount = tasks.Count(),
                 TasksDoneCount = tasks.Where(x => x.Status.Equals(Todo.Domain.Entities.TodoTaskStatus.TaskStatus.Completed)).Count(),
                 TasksInProgressCount = tasks.Where(x => x.Status.Equals(Todo.Domain.Entities.TodoTaskStatus.TaskStatus.InProgress)).Count(),
                 TasksNotStarted = tasks.Where(x => x.Status.Equals(Todo.Domain.Entities.TodoTaskStatus.TaskStatus.NotStarted)).Count(),
-            });
+                TaskDoneInCurrentList = repository.TodoListRepository.GetAll().Include(x => x.Tasks).Where(l => l.Id == listId).Count()
+            }); 
         }
         public IActionResult Create()
         {
@@ -147,6 +157,26 @@ namespace ToDoList.WebApp.Controllers
             repository.TodoListRepository.Update(listToUpdate);
             repository.Save();
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+
+        public IActionResult Stats(TodoListStatsViewModel vm)
+        {
+            //var list = vm.CurrentTaskId;
+            var x = ViewBag.UserLists;
+            var list = repository.TodoListRepository.GetOneByCondition(x => x.Id == vm.Id);
+            var tasks = repository.TodoTaskRepository.GetAll();
+
+            return View(new TaskStatsViewModel()
+            {
+                TasksCount = tasks.Count(),
+                TasksDoneCount = tasks.Where(x => x.Status.Equals(Todo.Domain.Entities.TodoTaskStatus.TaskStatus.Completed)).Count(),
+                TasksInProgressCount = tasks.Where(x => x.Status.Equals(Todo.Domain.Entities.TodoTaskStatus.TaskStatus.InProgress)).Count(),
+                TasksNotStarted = tasks.Where(x => x.Status.Equals(Todo.Domain.Entities.TodoTaskStatus.TaskStatus.NotStarted)).Count(),
+               // TaskDoneInCurrentList = list.Tasks.Where(x => x.Status.Equals(Todo.Domain.Entities.TodoTaskStatus.TaskStatus.Completed)).Count(),
+            });
+
         }
 
         [HttpPost]

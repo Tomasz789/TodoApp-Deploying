@@ -15,6 +15,8 @@ namespace TodoApp.Repositories.Repositories
         private ITodoTaskRepository todoTaskRepository;
         private INoteRepository noteRepository;
         private IShoppingListRepository shoppingListRepository;
+        private IIncomeRepository incomeRepository;
+        private IExpenseRepository expenseRepository;
 
         public RepositoryWrapper(AppDatabaseContext context)
         {
@@ -84,6 +86,33 @@ namespace TodoApp.Repositories.Repositories
                 return shoppingListRepository;
             }
         }
+
+        public IIncomeRepository IncomeRepository
+        {
+            get
+            {
+                if (incomeRepository == null)
+                {
+                    incomeRepository = new IncomeRepository(context);
+                }
+
+                return incomeRepository;
+            }
+        }
+
+        public IExpenseRepository ExpenseRepository
+        {
+            get
+            {
+                if (expenseRepository == null)
+                {
+                    expenseRepository = new ExpenseRepository(context);
+                }
+
+                return expenseRepository;
+            }
+        }
+
         public void Save()
         {
             this.context.SaveChanges();

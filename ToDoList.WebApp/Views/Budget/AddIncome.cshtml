@@ -1,0 +1,27 @@
+﻿@using ToDoList.WebApp.Models.ViewModels.BudgetViewModels
+@using Todo.Domain.Entities.Budgets
+
+@model IncomeViewModel
+
+
+<div class="container m-2">
+    <h1>Create income</h1>
+    <form method="post" asp-action="AddIncome">
+        <div>
+        <label asp-for="Name"></label>
+        <input type="text" asp-for="Name" />
+        <span class="text-danger" asp-validation-for="Name"></span>
+            <div style="float-left">
+                <label asp-for="Value"></label>
+                <input type="text" asp-for="Value"/>
+                <span class="text-danger" asp-validation-for="Value"></span>
+            </div>
+            <div>
+                <label asp-for="Currency"></label>
+                <select asp-for="Currency" asp-items="Html.GetEnumSelectList<Currency>()"></select>
+                <span asp-validation-for="Currency"></span>
+            </div>
+    </div>
+      <button type="submit" class="btn btn-success">Create</button>
+    </form>
+</div>

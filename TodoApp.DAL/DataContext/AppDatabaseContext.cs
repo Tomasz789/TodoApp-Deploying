@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Todo.Domain.Entities;
+using Todo.Domain.Entities.Budgets;
 #pragma warning disable S927 // Parameter names should match base declaration and other partial definitions
 
 namespace TodoApp.DAL.DataContext
@@ -25,7 +26,12 @@ namespace TodoApp.DAL.DataContext
         public DbSet<ShoppingList> ShoppingLists { get; set; }
 
         public DbSet<AppUser> AppUsers { get; set; }
+
         public DbSet<TodoTask> Tasks { get; set; }
+
+        public DbSet<Income> Incomes { get; set; }
+
+        public DbSet<Expense> Expenses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +40,8 @@ namespace TodoApp.DAL.DataContext
             modelBuilder.Entity<AppUser>().HasMany(t => t.TodoLists).WithOne(t => t.User).HasForeignKey(t => t.UserId);
             modelBuilder.Entity<AppUser>().HasMany(n => n.Notes).WithOne(u => u.User).HasForeignKey(t => t.UserId);
             modelBuilder.Entity<AppUser>().HasMany(s => s.ShoppingLists).WithOne(u => u.User).HasForeignKey(t => t.UserId);
+            modelBuilder.Entity<AppUser>().HasMany(i => i.Incomes).WithOne(u => u.User).HasForeignKey(u => u.UserId);
+            modelBuilder.Entity<AppUser>().HasMany(e => e.Expenses).WithOne(u => u.User).HasForeignKey(u => u.UserId);
         }
     }
 }

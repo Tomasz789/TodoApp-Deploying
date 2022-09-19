@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Todo.Domain.Entities\Todo.Domain.Entities.csproj" />
+    <ProjectReference Include="..\TodoApp.CurrencyHelper\TodoApp.CurrencyHelper.csproj" />
     <ProjectReference Include="..\TodoApp.DAL\TodoApp.DAL.csproj" />
     <ProjectReference Include="..\TodoApp.Repositories\TodoApp.Repositories.csproj" />
   </ItemGroup>

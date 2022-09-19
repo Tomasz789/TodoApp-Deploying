@@ -232,6 +232,70 @@ namespace ToDoList.WebApp.Migrations
                     b.ToTable("AspNetRoles");
                 });
 
+            modelBuilder.Entity("Todo.Domain.Entities.Budgets.Expense", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ExpenseCurrency")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("ExpenseValue")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhotoPath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Expenses");
+                });
+
+            modelBuilder.Entity("Todo.Domain.Entities.Budgets.Income", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IncomeCurrency")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("IncomeValue")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Incomes");
+                });
+
             modelBuilder.Entity("Todo.Domain.Entities.Note", b =>
                 {
                     b.Property<int>("Id")
@@ -414,6 +478,28 @@ namespace ToDoList.WebApp.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Todo.Domain.Entities.Budgets.Expense", b =>
+                {
+                    b.HasOne("Todo.Domain.Entities.AppUser", "User")
+                        .WithMany("Expenses")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Todo.Domain.Entities.Budgets.Income", b =>
+                {
+                    b.HasOne("Todo.Domain.Entities.AppUser", "User")
+                        .WithMany("Incomes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Todo.Domain.Entities.Note", b =>
                 {
                     b.HasOne("Todo.Domain.Entities.AppUser", "User")
@@ -460,6 +546,10 @@ namespace ToDoList.WebApp.Migrations
 
             modelBuilder.Entity("Todo.Domain.Entities.AppUser", b =>
                 {
+                    b.Navigation("Expenses");
+
+                    b.Navigation("Incomes");
+
                     b.Navigation("Notes");
 
                     b.Navigation("ShoppingLists");

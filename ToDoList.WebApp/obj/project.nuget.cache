@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KgJKS8tsXABYlavG/D38Ax87Hr2VSFKnltZlptkr81ZzHUCYv3t6bW2CaSP4imjjXJJXyOyNTTiNMSQZVWnlVg==",
+  "dgSpecHash": "AmogJb1A0oduxRWfEQHz4plS0gU4eCNnt+DQXF4FmjeU1PGUjnEI7gV8YrTo6MxMgCmAqpMf6473Du1ksmK72w==",
   "success": true,
   "projectFilePath": "D:\\Projekt\\aspnet-core-final-project\\ToDoList.WebApp\\ToDoList.WebApp.csproj",
   "expectedPackageFiles": [
@@ -68,7 +68,7 @@
     "C:\\Users\\lacho\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\lacho\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\lacho\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\nuget.frameworks\\4.7.0\\nuget.frameworks.4.7.0.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

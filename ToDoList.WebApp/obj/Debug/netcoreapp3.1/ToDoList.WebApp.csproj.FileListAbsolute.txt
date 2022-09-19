@@ -401,3 +401,9 @@ D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Raz
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingList\Edit.cshtml.g.cs
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\NoteSearchPartialView.cshtml.g.cs
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\List\Stats.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Budget\Index.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\WeatherPartialView.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Budget\AddExpense.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Budget\AddIncome.cshtml.g.cs
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.dll
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.pdb

@@ -1,17 +1,26 @@
 ﻿@using ToDoList.WebApp.Models.ViewModels
 @model TaskStatsViewModel
 
-@{
-    string chartTitle = "Tasks Chart";
-}
-<div class="d-flex col-12">
+<div class="col-12 text-center">
+    <h2>General statistics for all lists and tasks:</h2>
     <div class="row-4">
         <p>Tasks completed: @Model.TasksDoneCount</p>
         <p>Tasks in progress: @Model.TasksInProgressCount </p>
         <p>Tasks not started yet: @Model.TasksNotStarted</p>
     </div>
-    <div class="row-8">
+    
+    <div class="col-10 row-8">
         <div id="taskChart" style="width:500px; height:500px"></div>
+    </div>
+    <div class="col-10">
+        <form method="post">
+           <p>
+                Select list: @Html.DropDownList("UserLists", (IEnumerable<SelectListItem>)ViewBag.UserLists)
+                <input type="submit" class="btn btn-success m-2" value="Choose list" /> 
+           </p>
+        </form>
+
+        <p>Tasks done: @Model.TaskDoneInCurrentList</p>
     </div>
 </div>
 

@@ -1,0 +1,29 @@
+﻿
+<div class="card bg-dark text-white align-content-center" id="banner">
+    <h1>Your weather today</h1>
+    <div>
+        <form>
+            <input type="text" placeholder="Type Your city here" autofocus />
+            <button type="submit" class="btn btn-danger">Send</button>
+            <span id="msg"></span>
+        </form>
+    </div>
+    <div class="ajax-section">
+        <ul class="cities"></ul>
+    </div>
+</div>
+
+<script>
+    const form = document.querySelector("banner form");
+    const input = document.querySelector("banner input");
+    const msg = document.querySelector("banner msg");
+    const list = document.querySelector(".ajax-section cities");
+
+    var key = "31f4e162c5msh8bfe2ba75548632p156626jsna45e61ea834b";
+
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        const listsOfItems = list.querySelectorAll(".ajax-section .city");
+        const inputVal = input.Value;
+    });
+</script>

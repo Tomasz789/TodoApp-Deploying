@@ -12,10 +12,13 @@
     <partial name="StartPage" />
 }
 else {
-    <div class="col-12 text-center m-1 p-2">
+    <div class="col-12 text-center m-1 p-2" style="float:left">
         <h1>Hello, <span class="text-warning">@User.Identity.Name!</span></h1>
         <h2>Nice to see <span class="text-primary">You</span> again!</h2>
         <p>Today is <strong class="text-success"> @DateTime.Now.Date.DayOfWeek </strong>, @string.Format(@DateTime.Now.ToString(), "dd-mm-yyyy")</p>
+    </div>
+    <div>
+        <partial name = "WeatherPartialView" />
     </div>
     <div class="col-12 text-center">
         @if (@Model.Any())
