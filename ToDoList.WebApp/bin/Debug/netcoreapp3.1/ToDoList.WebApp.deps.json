@@ -39,6 +39,7 @@
           "TodoApp.CurrencyHelper": "1.0.0",
           "TodoApp.DAL": "1.0.0",
           "TodoApp.Repositories": "1.0.0",
+          "TodoApp.WeatherApiHelper": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -2480,6 +2481,17 @@
         },
         "compile": {
           "TodoApp.Repositories.dll": {}
+        }
+      },
+      "TodoApp.WeatherApiHelper/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "TodoApp.WeatherApiHelper.dll": {}
+        },
+        "compile": {
+          "TodoApp.WeatherApiHelper.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -5263,6 +5275,11 @@
       "sha512": ""
     },
     "TodoApp.Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TodoApp.WeatherApiHelper/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

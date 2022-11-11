@@ -7,6 +7,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Todo.Domain.Entities;
@@ -87,7 +88,6 @@ namespace ToDoList.WebApp.Controllers
             var tasks = repository.TodoTaskRepository.GetAll();
             var lists = repository.TodoListRepository.GetAll();
             var selected = new List<SelectListItem>();
-            
             foreach (var list in lists)
             {
                 selected.Add(new SelectListItem() { Text = list.Title, Value = list.Id.ToString() });
@@ -167,7 +167,6 @@ namespace ToDoList.WebApp.Controllers
             var x = ViewBag.UserLists;
             var list = repository.TodoListRepository.GetOneByCondition(x => x.Id == vm.Id);
             var tasks = repository.TodoTaskRepository.GetAll();
-
             return View(new TaskStatsViewModel()
             {
                 TasksCount = tasks.Count(),
@@ -183,7 +182,7 @@ namespace ToDoList.WebApp.Controllers
         public IActionResult RemoveConfirmation(int? id)
         {
             var listToDelete = repository.TodoListRepository.GetOneByCondition(x => x.Id == id);
-
+            
             if (listToDelete != null)
             {
                 var tasks = repository.TodoTaskRepository.GetAll().Where(y => y.TaskListId == id);

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Todo.Domain.Entities\Todo.Domain.Entities.csproj" />
     <ProjectReference Include="..\TodoApp.CurrencyHelper\TodoApp.CurrencyHelper.csproj" />
+    <ProjectReference Include="..\TodoApp.Interop.Services\TodoApp.Interop.Services.csproj" />
     <ProjectReference Include="..\TodoApp.Repositories\TodoApp.Repositories.csproj" />
   </ItemGroup>
 

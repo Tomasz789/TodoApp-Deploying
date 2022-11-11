@@ -7,24 +7,55 @@
         <partial name="AddIncome" model="new IncomeViewModel()" />
     </div>
     <div>
-        <h1>Budget summary</h1>
-        <p>Total incomes: @Model.TotalIncomes</p>
-        <p>Total expenses: @Model.TotalExpenses</p>
+        <h1>Budget summary (PLN)</h1> <br />
+        <h2>Total incomes</h2>
+        <table class="table table-striped col-12 text-center">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Month</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>@Model.TotalIncomesCurrentWeek</td>
+                <td>@Model.TotalIncomesCurrentMonth</td>
+                <td>@Model.TotalIncomesCurrentYear</td>
+            </tr>
+        </table>
+
+        <h2>Total expenses</h2>
+        <table class="table table-striped col-12 text-center">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Month</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>@Model.TotalExpensesCurrentWeek</td>
+                <td>@Model.TotalExpensesCurrentMonth</td>
+                <td>@Model.TotalExpensesCurrentYear</td>
+            </tr>
+        </table>
         <div id="budgetPieChart" style="width:500px; height:500px"></div>
         <div id="budgetDonutChart" style="width:500px; height:500px"></div>
+        <div id="linearChart" style="width:500px; height:500px"></div>
    </div>
 </div>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
+        google.charts.load('current',{'packages':['line']});
         google.charts.setOnLoadCallback(drawChart);
 
         function drawChart(){
             var data = google.visualization.arrayToDataTable([
                 ['Budget', 'Price'],
-                ['Incomes',  parseInt(@Model.TotalIncomes)], 
-                ['Expenses',parseInt(@Model.TotalExpenses)], 
+                ['Incomes',  parseInt(@Model.TotalIncomesCurrentMonth)], 
+                ['Expenses',parseInt(@Model.TotalExpensesCurrentMonth)], 
             ]
         );
 
@@ -33,24 +64,55 @@
         chart.draw(data, options);
     }
 
-    function drawDonutChartForTotal(){
+    function drawDonutChartForWeek(){
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Budget');
             data.addColumn('number', 'Value');
             data.addRows([
-                ['Incomes', parseInt(@Model.TotalIncomes)],
-                ['Expenses', parseInt(@Model.TotalExpenses)]
+                ['Incomes', parseInt(@Model.TotalIncomesCurrentWeek)],
+                ['Expenses', parseInt(@Model.TotalExpensesCurrentWeek)]
             ]);
 
             var donutChartOpts = {
-            'title':'Incomes and Expenses - values',
+            'title':'Incomes and Expenses - this week',
             'width':'500px',
             'height':'500px',
-            pieHole:0.5
          };
 
         var donutChart = new google.visualization.PieChart(document.getElementById('budgetDonutChart'));
         donutChart.draw(data, donutChartOpts);
      }
-     google.charts.setOnLoadCallback(drawDonutChartForTotal);
+     function drawLinearChart(){
+             var data = new google.visualization.DataTable();
+             data.addColumn('string','Month');
+             data.addColumn('number', 'Income value PLN');
+            // data.addColumn('number', 'Expense value PLN');
+
+             data.addRows([
+                 ['Jan', @Model.Incomes.Where(x => x.CreatedAt.Month == 1).Sum(x => x.IncomeValue)],
+                 ['Feb', @Model.Incomes.Where(x => x.CreatedAt.Month == 2).Sum(x => x.IncomeValue)],
+                 ['Mar', @Model.Incomes.Where(x => x.CreatedAt.Month == 3).Sum(x => x.IncomeValue)],
+                 ['Apr', @Model.Incomes.Where(x => x.CreatedAt.Month == 4).Sum(x => x.IncomeValue)],
+                 ['May', @Model.Incomes.Where(x => x.CreatedAt.Month == 5).Sum(x => x.IncomeValue)],
+                 ['Jun', @Model.Incomes.Where(x => x.CreatedAt.Month == 6).Sum(x => x.IncomeValue)],
+                 ['Jul', @Model.Incomes.Where(x => x.CreatedAt.Month == 7).Sum(x => x.IncomeValue)],
+                 ['Aug', @Model.Incomes.Where(x => x.CreatedAt.Month == 8).Sum(x => x.IncomeValue)],
+                 ['Sep', @Model.Incomes.Where(x => x.CreatedAt.Month == 9).Sum(x => x.IncomeValue)],
+                /* ['Oct', @Model.Incomes.Where(x => x.CreatedAt.Month == 10).Sum(x => x.IncomeValue)]*/
+             ]);
+           var opts = {
+                   chart:{
+                       title: 'Annual incomes and expenses',
+                       
+                   },
+                   width: 500,
+                   height: 500
+               
+           };
+           var chart = new google.charts.Line(document.getElementById('linearChart'));
+           chart.draw(data, google.charts.Line.convertOptions(opts));
+
+       }
+     google.charts.setOnLoadCallback(drawDonutChartForWeek);
+     google.charts.setOnLoadCallback(drawLinearChart);
 </script>

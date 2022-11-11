@@ -23,6 +23,12 @@ namespace ToDoList.WebApp.Controllers
         }
 
         [HttpGet]
+        public IActionResult Edit()
+        {
+            return View();
+        }
+
+        [HttpGet]
         [AllowAnonymous]
         public IActionResult Register()
         {

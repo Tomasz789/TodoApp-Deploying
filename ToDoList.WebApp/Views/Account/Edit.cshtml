@@ -1,0 +1,23 @@
+﻿@using ToDoList.WebApp.Models.AppUserViewModels
+@model AppUserViewModel
+
+<form method="post">
+    <label asp-for="FirstName"></label>
+    <input type="text" asp-for="FirstName"/>
+    <span class="text-danger m-1" asp-validation-for="FirstName"></span>
+    <label asp-for="LastName"></label>
+    <input type="text" asp-for="LastName"/>
+    <span class="text-danger m-1" asp-validation-for="LastName"></span>
+    <label asp-for="City"></label>
+    <input type="text" asp-for="City"/>
+    <span class="text-danger" asp-validation-for="City"></span>
+    <label asp-for="Country"></label>
+    <input type="text" asp-for="Country"/>
+    <span class="text-danger" asp-validation-for="Country"/>
+    <label asp-for="BirthDate"></label>
+    <input type="date" asp-for="BirthDate"/>
+    <label asp-for="PhotoPath" />
+    <input type="file" asp-for="PhotoPath"/>
+    <button type="submit" asp-action="Edit" asp-controller="Account" class="btn btn-success">Save</button>
+    <a class="btn btn-danger text-white" asp-controller="Home" asp-action="Index">Cancel</a>
+</form>

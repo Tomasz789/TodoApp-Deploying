@@ -9,7 +9,8 @@ using TodoApp.CurrencyHelper.Services;
 using TodoApp.DAL.DataContext;
 using TodoApp.DAL.Wrappers;
 using TodoApp.Repositories.Repositories;
-
+using TodoApp.WeatherApiHelper.Models;
+using TodoApp.WeatherApiHelper.Services;
 
 namespace ToDoList.WebApp.ServiceExtension
 {
@@ -69,6 +70,12 @@ namespace ToDoList.WebApp.ServiceExtension
             });
         }
 
+        public static void ConfigureHttpClients(this IServiceCollection services)
+        {
+            services.AddHttpClient<HttpApiHelper<UserLocationModel>>();
+            services.AddHttpClient<UserIpAddressApiHelper>();
+            services.AddHttpClient<WeatherApiHelper>();
+        }
         public static void ConfigureExternServices(this IServiceCollection services)
         {
             services.AddTransient<ICurrencyExchangeService, CurrencyExchangeService>();

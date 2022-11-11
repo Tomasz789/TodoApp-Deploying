@@ -9,6 +9,7 @@
     <ProjectReference Include="..\TodoApp.CurrencyHelper\TodoApp.CurrencyHelper.csproj" />
     <ProjectReference Include="..\TodoApp.DAL\TodoApp.DAL.csproj" />
     <ProjectReference Include="..\TodoApp.Repositories\TodoApp.Repositories.csproj" />
+    <ProjectReference Include="..\TodoApp.WeatherApiHelper\TodoApp.WeatherApiHelper.csproj" />
   </ItemGroup>
 
   <ItemGroup>

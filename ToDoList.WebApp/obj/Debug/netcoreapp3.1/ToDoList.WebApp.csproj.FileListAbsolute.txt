@@ -407,3 +407,6 @@ D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Raz
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Budget\AddIncome.cshtml.g.cs
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.dll
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.pdb
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.dll
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.pdb
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Edit.cshtml.g.cs
