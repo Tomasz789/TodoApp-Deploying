@@ -8,6 +8,7 @@ using Todo.Domain.Entities;
 using TodoApp.CurrencyHelper.Services;
 using TodoApp.DAL.DataContext;
 using TodoApp.DAL.Wrappers;
+using TodoApp.Interop.Services.DatasheetServices;
 using TodoApp.Repositories.Repositories;
 using TodoApp.WeatherApiHelper.Models;
 using TodoApp.WeatherApiHelper.Services;
@@ -79,6 +80,7 @@ namespace ToDoList.WebApp.ServiceExtension
         public static void ConfigureExternServices(this IServiceCollection services)
         {
             services.AddTransient<ICurrencyExchangeService, CurrencyExchangeService>();
+            services.AddScoped<BudgetDataSheet>();
         }
     }
 }

@@ -7,7 +7,11 @@
         <partial name="AddIncome" model="new IncomeViewModel()" />
     </div>
     <div>
-        <h1>Budget summary (PLN)</h1> <br />
+        <h1>Budget summary (PLN)</h1>
+        <form method="post">
+            <input type="submit" class="btn btn-success" asp-action="Report" asp-controller="Budget"  value ="report"/>
+        </form>
+        <br />
         <h2>Total incomes</h2>
         <table class="table table-striped col-12 text-center">
             <thead>

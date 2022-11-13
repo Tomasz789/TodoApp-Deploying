@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TodoApp.WeatherApiHelper.Models.WeatherEntities;
 
 namespace TodoApp.WeatherApiHelper.Models
 {
     public class UserLocationModel
     {
+      
         public string Status { get; set; }
 
         public string Country { get; set; }

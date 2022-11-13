@@ -10,9 +10,10 @@ namespace TodoApp.WeatherApiHelper.Services
 {
     public class WeatherApiHelper : HttpApiHelper<UserWeatherModel>
     {
-        private string url = "https://open-weather13.p.rapidapi.com/city/landon";
+        private string url;
         public WeatherApiHelper(HttpClient client) : base(client)
         {
+            url = "https://weatherapi-com.p.rapidapi.com/current.json?q=" + this.UserCity;
             client.BaseAddress = new Uri(url);
         }
 
@@ -22,10 +23,11 @@ namespace TodoApp.WeatherApiHelper.Services
             var userRequest = new HttpRequestMessage()
             {
                 Method = HttpMethod.Get,
+                RequestUri = new Uri(url + this.UserCity),
                 Headers =
                 {
                     { "X-RapidAPI-Key", "31f4e162c5msh8bfe2ba75548632p156626jsna45e61ea834b" },
-                    { "X-RapidAPI-Host", "open-weather13.p.rapidapi.com" }
+                    { "X-RapidAPI-Host", "weatherapi-com.p.rapidapi.com" }
                 }
             };
 

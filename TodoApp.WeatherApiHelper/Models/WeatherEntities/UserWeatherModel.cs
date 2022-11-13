@@ -7,14 +7,9 @@ namespace TodoApp.WeatherApiHelper.Models
 {
     public class UserWeatherModel
     {
-        public Coord Coord { get; set; }
+        public Location Location { get; set; }
 
-        public Weather [] Weather { get; set; }
+        public Current Current { get; set; }
 
-        public string Base { get; set; }
-
-        public Main Main { get; set; }
-
-        public int Visibility { get; set; }
     }
 }

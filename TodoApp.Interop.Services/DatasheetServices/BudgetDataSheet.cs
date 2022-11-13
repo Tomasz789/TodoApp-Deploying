@@ -120,7 +120,7 @@ namespace TodoApp.Interop.Services.DatasheetServices
             worksheet.Cells[summaryRow + 4, "B"] = budget.Incomes.Sum(x => x.IncomeValue) - budget.Expenses.Sum(x => x.ExpenseValue);
 
             this.ReleaseAppObject(worksheet);
-            Console.WriteLine(InfoMsg);
+            this.msg = "Report has been successfully generated";
             return 1;
         }
 

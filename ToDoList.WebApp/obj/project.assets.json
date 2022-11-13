@@ -2875,6 +2875,19 @@
           "bin/placeholder/TodoApp.DataVerifier.dll": {}
         }
       },
+      "TodoApp.Interop.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Todo.Domain.Entities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TodoApp.Interop.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TodoApp.Interop.Services.dll": {}
+        }
+      },
       "TodoApp.Repositories/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -9248,6 +9261,11 @@
       "path": "../TodoApp.DataVerifier/TodoApp.DataVerifier.csproj",
       "msbuildProject": "../TodoApp.DataVerifier/TodoApp.DataVerifier.csproj"
     },
+    "TodoApp.Interop.Services/1.0.0": {
+      "type": "project",
+      "path": "../TodoApp.Interop.Services/TodoApp.Interop.Services.csproj",
+      "msbuildProject": "../TodoApp.Interop.Services/TodoApp.Interop.Services.csproj"
+    },
     "TodoApp.Repositories/1.0.0": {
       "type": "project",
       "path": "../TodoApp.Repositories/TodoApp.Repositories.csproj",
@@ -9268,6 +9286,7 @@
       "Todo.Domain.Entities >= 1.0.0",
       "TodoApp.CurrencyHelper >= 1.0.0",
       "TodoApp.DAL >= 1.0.0",
+      "TodoApp.Interop.Services >= 1.0.0",
       "TodoApp.Repositories >= 1.0.0",
       "TodoApp.WeatherApiHelper >= 1.0.0"
     ]
@@ -9315,6 +9334,9 @@
             },
             "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj": {
               "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj"
+            },
+            "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj": {
+              "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj"
             },
             "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
               "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj"

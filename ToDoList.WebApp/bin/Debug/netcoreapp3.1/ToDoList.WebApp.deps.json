@@ -38,6 +38,7 @@
           "Todo.Domain.Entities": "1.0.0",
           "TodoApp.CurrencyHelper": "1.0.0",
           "TodoApp.DAL": "1.0.0",
+          "TodoApp.Interop.Services": "1.0.0",
           "TodoApp.Repositories": "1.0.0",
           "TodoApp.WeatherApiHelper": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -2469,6 +2470,17 @@
         },
         "compile": {
           "TodoApp.DataVerifier.dll": {}
+        }
+      },
+      "TodoApp.Interop.Services/1.0.0": {
+        "dependencies": {
+          "Todo.Domain.Entities": "1.0.0"
+        },
+        "runtime": {
+          "TodoApp.Interop.Services.dll": {}
+        },
+        "compile": {
+          "TodoApp.Interop.Services.dll": {}
         }
       },
       "TodoApp.Repositories/1.0.0": {
@@ -5270,6 +5282,11 @@
       "sha512": ""
     },
     "TodoApp.DataVerifier/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TodoApp.Interop.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

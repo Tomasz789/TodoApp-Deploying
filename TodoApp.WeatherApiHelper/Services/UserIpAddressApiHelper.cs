@@ -10,11 +10,11 @@ namespace TodoApp.WeatherApiHelper.Services
 {
     public sealed class UserIpAddressApiHelper : HttpApiHelper<UserLocationModel>
     {
-        private readonly WeatherApiService _ipServ;
+        private readonly UserIpAddressService _ipServ;
         public UserIpAddressApiHelper(HttpClient client) : base(client)
         {
             client.BaseAddress = new Uri("http://ip-api.com/json/");
-            _ipServ = new WeatherApiService();
+            _ipServ = new UserIpAddressService();
         }
 
         public override async Task<UserLocationModel> GetResponseAsync()

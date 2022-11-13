@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Todo.Domain.Entities.Budgets;
 using TodoApp.CurrencyHelper.Services;
 using TodoApp.DAL.Wrappers;
+using TodoApp.Interop.Services.DataSheetModels;
+using TodoApp.Interop.Services.DatasheetServices;
 using TodoApp.WeatherApiHelper.Services;
 using ToDoList.WebApp.Models.ViewModels.BudgetViewModels;
 
@@ -20,20 +22,26 @@ namespace ToDoList.WebApp.Controllers
         private readonly IHttpClientFactory clientFactor;
         private readonly UserIpAddressApiHelper userIpAddressApiHelper;
         private readonly WeatherApiHelper weatherApiHelper;
-        public BudgetController(IRepositoryWrapper repo, IHttpClientFactory clientFactory, WeatherApiHelper weatherApiHelper, UserIpAddressApiHelper helper)
+        private readonly BudgetDataSheet sheetService;
+        public BudgetController(IRepositoryWrapper repo, IHttpClientFactory clientFactory, WeatherApiHelper weatherApiHelper, UserIpAddressApiHelper helper, BudgetDataSheet sheetService)
         {
             this.repo = repo;
             this.clientFactor = clientFactory;
             userIpAddressApiHelper = helper;
             this.weatherApiHelper = weatherApiHelper;
             currencyService = new CurrencyExchangeService();
+            this.sheetService = sheetService;
         }
 
         public async Task<IActionResult> Index()
         {
             var expenses = repo.ExpenseRepository.GetAll();
             var incomes = repo.IncomeRepository.GetAll();
-           
+            var loc = await userIpAddressApiHelper.GetResponseAsync();
+            weatherApiHelper.UserCity = loc.City;
+            var weather = await weatherApiHelper.GetResponseAsync();
+            Console.WriteLine(weather.Current.Temp_C);
+
             var model = new BudgetSummaryViewModel()
             {
                 TotalExpenses = expenses.Sum(x => x.ExpenseValue),
@@ -105,6 +113,19 @@ namespace ToDoList.WebApp.Controllers
                 repo.Save();
             }
 
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Report()
+        {
+            var budget = new BudgetModel()
+            {
+                Expenses = repo.ExpenseRepository.GetAll().Where(e => e.CreatedAt <= DateTime.Now.AddDays(-28)),
+                Incomes = repo.IncomeRepository.GetAll().Where(i => i.CreatedAt <= DateTime.Now.AddDays(-28)),
+                Title = $"Budget summary for {DateTime.Now.Month} / {DateTime.Now.Year}"
+            };
+
+            sheetService.GenerateXslxFile(budget);
             return RedirectToAction("Index");
         }
     }
