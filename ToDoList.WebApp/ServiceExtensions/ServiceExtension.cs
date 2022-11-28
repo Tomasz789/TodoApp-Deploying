@@ -81,6 +81,7 @@ namespace ToDoList.WebApp.ServiceExtension
         {
             services.AddTransient<ICurrencyExchangeService, CurrencyExchangeService>();
             services.AddScoped<BudgetDataSheet>();
+            services.AddSignalR();
         }
     }
 }

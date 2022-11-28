@@ -412,3 +412,5 @@ D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\Tod
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Account\Edit.cshtml.g.cs
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.Interop.Services.dll
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.Interop.Services.pdb
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\libman.json
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SignalR.Core.dll

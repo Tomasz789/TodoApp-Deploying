@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,28 +20,22 @@ namespace ToDoList.WebApp.Controllers
     {
         private readonly IRepositoryWrapper repo;
         private readonly ICurrencyExchangeService currencyService;
-        private readonly IHttpClientFactory clientFactor;
-        private readonly UserIpAddressApiHelper userIpAddressApiHelper;
-        private readonly WeatherApiHelper weatherApiHelper;
+        private readonly IHttpClientFactory clientFactory;
         private readonly BudgetDataSheet sheetService;
-        public BudgetController(IRepositoryWrapper repo, IHttpClientFactory clientFactory, WeatherApiHelper weatherApiHelper, UserIpAddressApiHelper helper, BudgetDataSheet sheetService)
+
+        public BudgetController(IRepositoryWrapper repo, IHttpClientFactory clientFactory, BudgetDataSheet sheetService)
         {
             this.repo = repo;
-            this.clientFactor = clientFactory;
-            userIpAddressApiHelper = helper;
-            this.weatherApiHelper = weatherApiHelper;
+            this.clientFactory = clientFactory;
             currencyService = new CurrencyExchangeService();
             this.sheetService = sheetService;
         }
 
+       // [Authorize]
         public async Task<IActionResult> Index()
         {
             var expenses = repo.ExpenseRepository.GetAll();
             var incomes = repo.IncomeRepository.GetAll();
-            var loc = await userIpAddressApiHelper.GetResponseAsync();
-            weatherApiHelper.UserCity = loc.City;
-            var weather = await weatherApiHelper.GetResponseAsync();
-            Console.WriteLine(weather.Current.Temp_C);
 
             var model = new BudgetSummaryViewModel()
             {
@@ -48,18 +43,19 @@ namespace ToDoList.WebApp.Controllers
                 TotalIncomes = incomes.Sum(x => x.IncomeValue),
                 Incomes = incomes.ToList(),
                 Expenses = expenses.ToList(),
-                TotalExpensesCurrentWeek = expenses.Where(x => x.CreatedAt <= DateTime.Now.AddDays(-7)).Sum(x => x.ExpenseValue),
-                TotalIncomesCurrentWeek = incomes.Where(x => x.CreatedAt <= DateTime.Now.AddDays(-7)).Sum(x => x.IncomeValue),
-                TotalExpensesCurrentMonth = expenses.Where(x => x.CreatedAt <= DateTime.Now.AddMonths(-1)).Sum(x => x.ExpenseValue),
-                TotalIncomesCurrentMonth = incomes.Where(x => x.CreatedAt <= DateTime.Now.AddMonths(-2)).Sum(x => x.IncomeValue),
-                TotalExpensesCurrentYear = expenses.Where(x => x.CreatedAt <= DateTime.Now.AddYears(-1)).Sum(x => x.ExpenseValue),
-                TotalIncomesCurrentYear = incomes.Where(x => x.CreatedAt <= DateTime.Now.AddYears(-1)).Sum(x => x.IncomeValue),
+                TotalExpensesCurrentWeek = expenses.Where(x => x.CreatedAt >= DateTime.Now.AddDays(-7)).Sum(x => x.ExpenseValue),
+                TotalIncomesCurrentWeek = incomes.Where(x => x.CreatedAt >= DateTime.Now.AddDays(-7)).Sum(x => x.IncomeValue),
+                TotalExpensesCurrentMonth = expenses.Where(x => x.CreatedAt >= DateTime.Now.AddMonths(-1)).Sum(x => x.ExpenseValue),
+                TotalIncomesCurrentMonth = incomes.Where(x => x.CreatedAt >= DateTime.Now.AddMonths(-2)).Sum(x => x.IncomeValue),
+                TotalExpensesCurrentYear = expenses.Where(x => x.CreatedAt >= DateTime.Now.AddYears(-1)).Sum(x => x.ExpenseValue),
+                TotalIncomesCurrentYear = incomes.Where(x => x.CreatedAt >= DateTime.Now.AddYears(-1)).Sum(x => x.IncomeValue),
             };
 
             return View(model);
         }
 
         [HttpPost]
+      //  [Authorize]
         public async Task<IActionResult> AddIncome(IncomeViewModel vm)
         {
             var UserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -87,6 +83,7 @@ namespace ToDoList.WebApp.Controllers
         }
 
         [HttpPost]
+        //[Authorize]
         public async Task<IActionResult> AddExpense(ExpenseViewModel vm)
         {
             var UserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -120,8 +117,8 @@ namespace ToDoList.WebApp.Controllers
         {
             var budget = new BudgetModel()
             {
-                Expenses = repo.ExpenseRepository.GetAll().Where(e => e.CreatedAt <= DateTime.Now.AddDays(-28)),
-                Incomes = repo.IncomeRepository.GetAll().Where(i => i.CreatedAt <= DateTime.Now.AddDays(-28)),
+                Expenses = repo.ExpenseRepository.GetAll().Where(e => e.CreatedAt >= DateTime.Now.AddDays(-20)),
+                Incomes = repo.IncomeRepository.GetAll().Where(i => i.CreatedAt >= DateTime.Now.AddDays(-20)),
                 Title = $"Budget summary for {DateTime.Now.Month} / {DateTime.Now.Year}"
             };
 

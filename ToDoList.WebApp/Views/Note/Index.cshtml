@@ -7,18 +7,18 @@
 }
 
 
-<div class="d-flex col-12">
+<div class="d-flex">
     <div class="col-3" style="float:left">
         <partial name="NoteSearchPartialView" model="new SearchNoteViewModel()" />
     </div>
 
-    <div class="col-9 m-6 text-center">
+    <div class="col-9 text-center">
         @if (!Model.Any())
         {
             <h1>
                 It's so empty here..
-                <a asp-action="Create" asp-controller="Note" class="text-success">Add a note!</a>
             </h1>
+            <a asp-action="Create" asp-controller="Note" class="btn btn-success">Add a note!</a>
         }
         else
         {

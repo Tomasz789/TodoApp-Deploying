@@ -1,29 +1,17 @@
-﻿
-<div class="card bg-dark text-white align-content-center" id="banner">
+﻿@model DailyWeatherViewModel
+
+<div class="card text-white align-content-center" id="banner" style="background-color:#66ccff;">
     <h1>Your weather today</h1>
-    <div>
-        <form>
-            <input type="text" placeholder="Type Your city here" autofocus />
-            <button type="submit" class="btn btn-danger">Send</button>
-            <span id="msg"></span>
-        </form>
+    <div class="card card-body" style="background-color:#66ccff">
+        <p><img src="@Model.Icon" /></p>
+        <p>Temp. <b>@Model.Temp_C ℃ </b></p>
+        <small>Feels like: <b>@Model.Temp_FeelsLike_C ℃</b></small>
+        <p>Humidity <b>@Model.Humidity % </b></p>
+        <p>Wind <b>@Model.Wind_Kph km/h </b> <b>@Model.Wind_Dir<</b> </p>
+        <p>Press <b>@Model.Pressure_Mb hPa </b></p>
+        <p>Cloud <b>@Model.Cloud % </b></p>
     </div>
-    <div class="ajax-section">
-        <ul class="cities"></ul>
+    <div class="card card-footer">
+        <small>Source: WeatherApi</small>
     </div>
 </div>
-
-<script>
-    const form = document.querySelector("banner form");
-    const input = document.querySelector("banner input");
-    const msg = document.querySelector("banner msg");
-    const list = document.querySelector(".ajax-section cities");
-
-    var key = "31f4e162c5msh8bfe2ba75548632p156626jsna45e61ea834b";
-
-    form.addEventListener("submit", e => {
-        e.preventDefault();
-        const listsOfItems = list.querySelectorAll(".ajax-section .city");
-        const inputVal = input.Value;
-    });
-</script>
