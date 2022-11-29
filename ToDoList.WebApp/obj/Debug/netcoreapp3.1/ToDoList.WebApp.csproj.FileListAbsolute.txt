@@ -414,3 +414,4 @@ D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\Tod
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\TodoApp.Interop.Services.pdb
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\libman.json
 D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\Microsoft.AspNet.SignalR.Core.dll
+D:\Projekt\aspnet-core-final-project\ToDoList.WebApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll

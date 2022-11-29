@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using System.Threading.Tasks;
 using Todo.Domain.Entities;
 using TodoApp.DAL.Wrappers;
@@ -83,6 +84,19 @@ namespace ToDoList.WebApp.Controllers
 
             ModelState.AddModelError(string.Empty, "Login failed");
             return View(vm);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(string returnUrl)
+        {
+            var loginModel = new LoginViewModel()
+            {
+                ReturnUrl = returnUrl,
+                ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync())
+                                        .ToList(),
+            };
+
+            return View(loginModel);
         }
     }
 }

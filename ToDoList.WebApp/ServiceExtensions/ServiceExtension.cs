@@ -20,7 +20,7 @@ namespace ToDoList.WebApp.ServiceExtension
     /// also adds new services and configures identity for User.
     /// </summary>
     public static class ServiceExtension
-    {
+    { 
         /// <summary>
         /// Configures sql conection for db context.
         /// </summary>
@@ -60,6 +60,24 @@ namespace ToDoList.WebApp.ServiceExtension
             });
         }
 
+        public static void ConfigureAuthentication(this IServiceCollection services, IConfiguration configuration)
+        {
+            var clientId = configuration["GoogleAuth:ClientID"];
+            var clientSecret = configuration["GoogleAuth:ClientSecret"];
+
+            services.AddAuthentication().AddGoogle(opts => {
+                opts.ClientId = clientId;
+                opts.ClientSecret = clientSecret;
+                
+                }
+             ) ;
+        }
+
+        /// <summary>
+        /// Configures app session.
+        /// </summary>
+        /// <param name="services"></param>
+
         public static void ConfigureSession(this IServiceCollection services)
         {
             services.AddDistributedMemoryCache();
@@ -71,12 +89,21 @@ namespace ToDoList.WebApp.ServiceExtension
             });
         }
 
+        /// <summary>
+        /// Configure all http clients (for weather, ip).
+        /// </summary>
+        /// <param name="services">IServiceCollection extension.</param>
         public static void ConfigureHttpClients(this IServiceCollection services)
         {
             services.AddHttpClient<HttpApiHelper<UserLocationModel>>();
             services.AddHttpClient<UserIpAddressApiHelper>();
             services.AddHttpClient<WeatherApiHelper>();
         }
+
+        /// <summary>
+        /// Configure last libraries needed for web app.
+        /// </summary>
+        /// <param name="services">See previous comments.</param>
         public static void ConfigureExternServices(this IServiceCollection services)
         {
             services.AddTransient<ICurrencyExchangeService, CurrencyExchangeService>();

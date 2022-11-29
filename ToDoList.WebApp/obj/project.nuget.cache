@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ecH+ukjuulZ9Ffn6gXWqf8IYP/pxnsqMd4G/4Gh2MMkAAJUE/aGMvTU7ydRW6kneoB0yjPzN2N1bNBPqr42WLA==",
+  "dgSpecHash": "dV0ePAcU9nIqIxDdKbZW//TQCaXjdZ/tSyjZysS+i2tJH0cw5SJ0yk4CtLE5bnBgjBHEngvivTEMmHc+XSVJsw==",
   "success": true,
   "projectFilePath": "D:\\Projekt\\aspnet-core-final-project\\ToDoList.WebApp\\ToDoList.WebApp.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\lacho\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\microsoft.aspnet.signalr.core\\2.4.3\\microsoft.aspnet.signalr.core.2.4.3.nupkg.sha512",
+    "C:\\Users\\lacho\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.22\\microsoft.aspnetcore.authentication.google.3.1.22.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.8\\microsoft.aspnetcore.cryptography.internal.6.0.8.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.8\\microsoft.aspnetcore.cryptography.keyderivation.6.0.8.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

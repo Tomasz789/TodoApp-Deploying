@@ -23,6 +23,11 @@
                     <label asp-for="RememberUser">Remember me</label>
                 </div>
             <button type="submit" class="btn btn-primary m-1">Login</button>
+            <button type="submit" class="btn btn-dark text-white"><i class="bi bi-google"></i> Google</button>
+             @if (!Model.ExternalLogins.Any())
+                {
+                    <div class="text-danger">No external login found.</div>
+                }
         </form>
         <a asp-controller="Account" asp-action="Register">Don't have an account? Register here!</a>
     </div>
