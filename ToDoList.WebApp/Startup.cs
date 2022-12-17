@@ -28,7 +28,7 @@ namespace ToDoList.WebApp
             services.ConfigureSqlServerConnection(Configuration);
             services.ConfigureIdentity();
             services.ConfigureRepositoryWrapper();
-            //services.ConfigureAuthentication(Configuration);
+            services.ConfigureAuthentication(Configuration);
             services.ConfigureSession();
             services.ConfigureHttpClients();
             services.ConfigureExternServices();

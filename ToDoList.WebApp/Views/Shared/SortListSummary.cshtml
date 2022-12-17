@@ -2,15 +2,25 @@
 @using ToDoList.WebApp.Models.ViewModels.Sort.SortTypes
 @model SortListViewModel
 
+<h6>Search by title</h6>
  @using (Html.BeginForm())
  {
-        <p>Search by title: @Html.TextBox("SearchString")
+        <p> @Html.TextBox("SearchString")
             <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
         </p>
  }
- <h1>Sort by</h1>
-@Html.ActionLink("Created date", "Index", "List", new{sortOrder = ViewBag.CreatedDateSortParam});
-@Html.ActionLink("Last updated", "Index", "List", new {sortOrder = ViewBag.UpdatedDateSortParam});
+ <h6>Order by date</h6>
+<div>
+    @Html.ActionLink("Created date", "Index", "List", new{sortOrder = ViewBag.CreatedDateSortParam}) <i class="bi bi-arrow-up text-success"></i><i class="bi bi-arrow-down text-danger"></i>
+</div>
+<br />
+<div>
+    @Html.ActionLink("Last updated", "Index", "List", new {sortOrder = ViewBag.UpdatedDateSortParam})  <i class="bi bi-arrow-up text-success"></i><i class="bi bi-arrow-down text-danger"></i>
+</div>
+<br />
+<h6>
+    Filter by date
+</h6>
 <form class="form-group m-2" method="post">
     <label asp-for="CreatedDateMin"></label>
     <input type="datetime-local" asp-for="CreatedDateMin" />

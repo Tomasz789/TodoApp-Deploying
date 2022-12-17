@@ -31,11 +31,13 @@ namespace ToDoList.WebApp.Controllers
             this.sheetService = sheetService;
         }
 
-       // [Authorize]
+        [Authorize]
         public async Task<IActionResult> Index()
         {
-            var expenses = repo.ExpenseRepository.GetAll();
-            var incomes = repo.IncomeRepository.GetAll();
+            var UserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            var expenses = repo.ExpenseRepository.GetByCondition(e => e.UserId == UserId);
+            var incomes = repo.IncomeRepository.GetByCondition(i => i.UserId == UserId);
 
             var model = new BudgetSummaryViewModel()
             {
@@ -55,7 +57,7 @@ namespace ToDoList.WebApp.Controllers
         }
 
         [HttpPost]
-      //  [Authorize]
+        [Authorize]
         public async Task<IActionResult> AddIncome(IncomeViewModel vm)
         {
             var UserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -83,7 +85,7 @@ namespace ToDoList.WebApp.Controllers
         }
 
         [HttpPost]
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> AddExpense(ExpenseViewModel vm)
         {
             var UserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -115,10 +117,12 @@ namespace ToDoList.WebApp.Controllers
 
         public IActionResult Report()
         {
+            var UserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
             var budget = new BudgetModel()
             {
-                Expenses = repo.ExpenseRepository.GetAll().Where(e => e.CreatedAt >= DateTime.Now.AddDays(-20)),
-                Incomes = repo.IncomeRepository.GetAll().Where(i => i.CreatedAt >= DateTime.Now.AddDays(-20)),
+                Expenses = repo.ExpenseRepository.GetByCondition(u => u.UserId.ToString().Contains(UserId.ToString())).Where(e => e.CreatedAt >= DateTime.Now.AddDays(-20)),
+                Incomes = repo.IncomeRepository.GetByCondition(u => u.UserId.ToString().Contains(UserId.ToString())).Where(i => i.CreatedAt >= DateTime.Now.AddDays(-20)),
                 Title = $"Budget summary for {DateTime.Now.Month} / {DateTime.Now.Year}"
             };
 

@@ -22,13 +22,22 @@
                     <input type="checkbox" asp-for="RememberUser" />
                     <label asp-for="RememberUser">Remember me</label>
                 </div>
-            <button type="submit" class="btn btn-primary m-1">Login</button>
-            <button type="submit" class="btn btn-dark text-white"><i class="bi bi-google"></i> Google</button>
-             @if (!Model.ExternalLogins.Any())
-                {
-                    <div class="text-danger">No external login found.</div>
-                }
+            <button type="submit" class="btn btn-primary m-1" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">Login</button>
         </form>
+        @if (!Model.ExternalLogins.Any())
+            {
+                <div class="text-danger">No external login found.</div>
+            }
+            else
+            {
+                <form method="post" asp-action="LoginByExternalProvider" asp-route-returnUrl="@Model.ReturnUrl">
+                    @foreach (var provider in @Model.ExternalLogins)
+                    {
+                        <button type="submit" class="btn btn-dark text-white" name="provider"
+                            title="@provider.DisplayName" value="@provider.Name"><i class="bi bi-google"></i> @provider.Name</button>
+                    }
+                </form>
+            }
         <a asp-controller="Account" asp-action="Register">Don't have an account? Register here!</a>
     </div>
 

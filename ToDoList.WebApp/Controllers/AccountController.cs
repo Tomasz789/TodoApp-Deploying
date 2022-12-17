@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Todo.Domain.Entities;
 using TodoApp.DAL.Wrappers;
@@ -64,12 +65,6 @@ namespace ToDoList.WebApp.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [AllowAnonymous]
-        public IActionResult Login()
-        {
-            return View();
-        }
-
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel vm)
         {
@@ -86,7 +81,8 @@ namespace ToDoList.WebApp.Controllers
             return View(vm);
         }
 
-        [HttpPost]
+        [AllowAnonymous]
+        [HttpGet]
         public async Task<IActionResult> Login(string returnUrl)
         {
             var loginModel = new LoginViewModel()
@@ -97,6 +93,77 @@ namespace ToDoList.WebApp.Controllers
             };
 
             return View(loginModel);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+
+        public IActionResult LoginByExternalProvider(string returnUrl, string provider)
+        {
+            var redirectUrl = Url.Action("ExternalLoginCallback", "Account",
+                               new { ReturnUrl = returnUrl });
+            var prop = signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+            return new ChallengeResult(provider, prop);
+        }
+
+        [AllowAnonymous]
+        public async Task<IActionResult> ExternalLoginCallback(string returnUrl = null, string remoteError = null)
+        {
+            returnUrl = returnUrl ?? Url.Content("~/");
+            var loginModel = new LoginViewModel()
+            {
+                ReturnUrl = returnUrl,
+                ExternalLogins = (await signInManager.GetExternalAuthenticationSchemesAsync()).ToList(),
+            };
+
+            if (remoteError != null)
+            {
+                ModelState.AddModelError(string.Empty, $"An error occured from {remoteError}");
+                return View("Login", loginModel);
+            }
+
+            var signInInfo = await signInManager.GetExternalLoginInfoAsync();
+
+            if (signInInfo == null)
+            {
+                ModelState.AddModelError(string.Empty, "Cannot obtain login information");
+                return View("Login", loginModel);
+            }
+
+            var signInRes = await signInManager.ExternalLoginSignInAsync(signInInfo.LoginProvider, signInInfo.ProviderKey, false, true);    // sign user
+
+            if (signInRes.Succeeded)
+            {
+                return LocalRedirect(returnUrl);
+            }
+            else
+            {
+                var userEmail = signInInfo.Principal.FindFirstValue(ClaimTypes.Email);  // get user email
+
+                if (userEmail != null)
+                {
+                    var user = await userManager.FindByEmailAsync(userEmail);  // find user and check if exists
+
+                    // add when user doesn't exist
+                    if (user != null)
+                    {
+                        user = new AppUser()
+                        {
+                            Email = signInInfo.Principal.FindFirstValue(ClaimTypes.Email),
+                            UserName = signInInfo.Principal.FindFirstValue(ClaimTypes.Email)
+                        };
+
+                        await userManager.CreateAsync(user);        // add new user by Google email
+                    }
+
+                    await userManager.AddLoginAsync(user, signInInfo);
+                    await signInManager.SignInAsync(user, isPersistent: false);
+
+                    return LocalRedirect(returnUrl);
+                }
+            }
+
+            return View();
         }
     }
 }
