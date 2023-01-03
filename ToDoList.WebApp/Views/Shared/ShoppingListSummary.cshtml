@@ -1,13 +1,22 @@
 ﻿@using Todo.Domain.Entities
 @model ShoppingList
 
-<div class = "card col-6">
+<div class = "card col-6 text-center">
+    <div class="card-header">
+        <strong>@Model.Title</strong>
+    </div>
     <div class="card-body">
-        <p>@Model.Title</p>
-        <hr />
         @Model.Description
+        <strong>@Model.DueDate.ToShortDateString()</strong>
     </div>
     <div class="card-footer">
-        @Model.DueDate.ToShortDateString()
+        <div class="btn btn-group">
+            <a class="btn btn-primary m-1" asp-controller="ShoppingList" asp-action="Edit" asp-route-id="@Model.Id">
+                <i class="bi bi-pen-fill"></i>
+            </a>
+            <a class="btn btn-danger m-1" asp-controller="ShoppingList" asp-action="Remove" asp-route-id="@Model.Id">
+                <i class="bi bi-trash-fill"></i>
+            </a>
+        </div>
     </div>
 </div>

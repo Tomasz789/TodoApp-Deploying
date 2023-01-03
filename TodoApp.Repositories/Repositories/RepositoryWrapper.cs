@@ -17,6 +17,7 @@ namespace TodoApp.Repositories.Repositories
         private IShoppingListRepository shoppingListRepository;
         private IIncomeRepository incomeRepository;
         private IExpenseRepository expenseRepository;
+        private INotifyRepository notifyRepository;
 
         public RepositoryWrapper(AppDatabaseContext context)
         {
@@ -110,6 +111,19 @@ namespace TodoApp.Repositories.Repositories
                 }
 
                 return expenseRepository;
+            }
+        }
+
+        public INotifyRepository NotifyRepository
+        {
+            get
+            {
+                if (notifyRepository == null)
+                {
+                    notifyRepository = new NotifyRepository(context);
+                }
+
+                return notifyRepository;
             }
         }
 

@@ -33,6 +33,8 @@ namespace TodoApp.DAL.DataContext
 
         public DbSet<Expense> Expenses { get; set; }
 
+        public DbSet<Notify> Notifies { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -42,6 +44,7 @@ namespace TodoApp.DAL.DataContext
             modelBuilder.Entity<AppUser>().HasMany(s => s.ShoppingLists).WithOne(u => u.User).HasForeignKey(t => t.UserId);
             modelBuilder.Entity<AppUser>().HasMany(i => i.Incomes).WithOne(u => u.User).HasForeignKey(u => u.UserId);
             modelBuilder.Entity<AppUser>().HasMany(e => e.Expenses).WithOne(u => u.User).HasForeignKey(u => u.UserId);
+            modelBuilder.Entity<AppUser>().HasMany(n => n.Notifies).WithOne(u => u.User).HasForeignKey(u => u.UserId);
         }
     }
 }

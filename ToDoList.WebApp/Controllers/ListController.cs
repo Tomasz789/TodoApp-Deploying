@@ -92,6 +92,7 @@ namespace ToDoList.WebApp.Controllers
             {
                 selected.Add(new SelectListItem() { Text = list.Title, Value = list.Id.ToString() });
             }
+
             ViewBag.UserLists = selected;
             return View(new TaskStatsViewModel()
             {

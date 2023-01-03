@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Todo.Domain.Entities;
 using TodoApp.DAL.Wrappers;
 using ToDoList.WebApp.Models;
+using ToDoList.WebApp.Models.AppUserViewModels;
 using ToDoList.WebApp.Models.ViewModels;
 
 namespace ToDoList.WebApp.Controllers
@@ -34,6 +36,36 @@ namespace ToDoList.WebApp.Controllers
         [AllowAnonymous]
         public IActionResult Register()
         {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult ChangeUserNameAsync()
+        {
+            return View();
+        }
+
+        [Authorize]
+
+        public async Task<IActionResult> ChangeUserNameAsync(UserCredentialsViewModel vm)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var user = await userManager.FindByIdAsync(userId);
+
+            if (user.UserName == vm.UserName)
+            {
+                TempData["ErrorMsg"] = "User name must be different.";
+            }
+
+            if (ModelState.IsValid)
+            {
+                user.UserName = vm.UserName;
+                //var passwordToken = await userManager.GeneratePasswordResetTokenAsync(user);
+               // var passwordResult = await userManager.ResetPasswordAsync(user, passwordToken, vm.Password);
+                await signInManager.UserManager.UpdateAsync(user);
+            }
+
             return View();
         }
 
@@ -164,6 +196,16 @@ namespace ToDoList.WebApp.Controllers
             }
 
             return View();
+        }
+
+        public IActionResult GetPersonalDataPartialView()
+        {
+            return PartialView("PersonalDataEditPage", new AppUserViewModel());
+        }
+
+        public IActionResult GetAccountCredentialPartialView()
+        {
+            return PartialView("AccountCredentialsPage", new UserCredentialsViewModel());
         }
     }
 }

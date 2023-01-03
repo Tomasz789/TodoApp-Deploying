@@ -1,23 +1,30 @@
-﻿@using ToDoList.WebApp.Models.AppUserViewModels
-@model AppUserViewModel
+﻿
+@using ToDoList.WebApp.Models.AppUserViewModels
 
-<form method="post">
-    <label asp-for="FirstName"></label>
-    <input type="text" asp-for="FirstName"/>
-    <span class="text-danger m-1" asp-validation-for="FirstName"></span>
-    <label asp-for="LastName"></label>
-    <input type="text" asp-for="LastName"/>
-    <span class="text-danger m-1" asp-validation-for="LastName"></span>
-    <label asp-for="City"></label>
-    <input type="text" asp-for="City"/>
-    <span class="text-danger" asp-validation-for="City"></span>
-    <label asp-for="Country"></label>
-    <input type="text" asp-for="Country"/>
-    <span class="text-danger" asp-validation-for="Country"/>
-    <label asp-for="BirthDate"></label>
-    <input type="date" asp-for="BirthDate"/>
-    <label asp-for="PhotoPath" />
-    <input type="file" asp-for="PhotoPath"/>
-    <button type="submit" asp-action="Edit" asp-controller="Account" class="btn btn-success">Save</button>
-    <a class="btn btn-danger text-white" asp-controller="Home" asp-action="Index">Cancel</a>
-</form>
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="d-flex col-12 border-2">
+    <div class="btn-group-vertical m-3">
+        <button id="account" class="btn btn-white text-success border-success">Account settings</button>
+        <button id="personal" class="btn btn-white text-success border-success">Personal data</button> 
+    </div>
+    <div class="col-8" id="loadPartial">
+    </div>
+    <p>@TempData["ErrorMsg"]</p>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function(){
+            $("#personal").click(function(){
+                $("#loadPartial").load("/Account/GetPersonalDataPartialView");
+            });
+
+            $("#account").click(function(){
+                $("#loadPartial").load("/Account/GetAccountCredentialPartialView");
+            });
+        });
+    </script>
+}

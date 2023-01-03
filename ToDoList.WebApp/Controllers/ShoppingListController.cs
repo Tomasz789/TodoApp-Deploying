@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 using System.Security.Claims;
 using Todo.Domain.Entities;
 using TodoApp.DAL.Wrappers;
@@ -14,22 +16,76 @@ namespace ToDoList.WebApp.Controllers
         {
             repo = repository;
         }
-        public IActionResult Index()
+
+        [Authorize]
+        public IActionResult Index(SearchShoppingListViewModel vm, string shoppingListTitle = "")
         {
-            var shoppinglists = repo.ShoppingListRepository.GetAll();
+            var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var shoppinglists = repo.ShoppingListRepository.GetByCondition(u => u.UserId == userId);
+            shoppinglists = shoppinglists.Where(x => x.CreatedDate >= vm.CreatedDateFrom && x.CreatedDate <= vm.CreatedDateTo);
+            shoppinglists = shoppinglists.Where(x => x.DueDate >= vm.DueDateFrom && x.DueDate <= vm.DueDateTo);
+
+            if (!string.IsNullOrEmpty(shoppingListTitle))
+            {
+                shoppinglists = shoppinglists.Where(x => x.Title.Contains(shoppingListTitle));
+            }
+
+
+            switch (vm.OrderByCreatedDateType)
+            {
+                case "Ascending":
+                    {
+                        shoppinglists = shoppinglists.OrderBy(x => x.CreatedDate);
+                    }
+                    break;
+                case "Descening":
+                    {
+                        shoppinglists.OrderByDescending(x => x.CreatedDate);
+                    }
+                    break;
+            }
+
+            switch (vm.OrderByDueDateType)
+            {
+                case "Ascending":
+                    {
+                        shoppinglists = shoppinglists.OrderBy(x => x.DueDate);
+                    }
+                    break;
+                case "Descening":
+                    {
+                        shoppinglists.OrderByDescending(x => x.DueDate);
+                    }
+                    break;
+            }
+           
             return View(shoppinglists);
         }
 
+        [Authorize]
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
-        public IActionResult Update()
+        [Authorize]
+        [HttpGet]
+        public IActionResult Edit()
         {
             return View();
         }
 
+        [Authorize]
+        [HttpGet]
+        public IActionResult Remove(int? id) 
+        {
+            var shoppingListToDelete = repo.ShoppingListRepository.GetOneByCondition(x => x.Id == id);
+
+            return View(shoppingListToDelete); 
+        }
+
+        [Authorize]
         [HttpPost]
         public IActionResult Create(CreateShoppingListViewModel vm)
         {
@@ -50,8 +106,9 @@ namespace ToDoList.WebApp.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         [HttpPost]
-        public IActionResult Edit(UpdateShoppingListViewModel vm, int? id)
+        public IActionResult Edit(int? id, UpdateShoppingListViewModel vm)
         {
             var shoppingListToUpdate = repo.ShoppingListRepository.GetOneByCondition(x => x.Id == id);
 
@@ -60,9 +117,26 @@ namespace ToDoList.WebApp.Controllers
                 shoppingListToUpdate.Title = vm.Title;
                 shoppingListToUpdate.Description = vm.Description;
                 shoppingListToUpdate.DueDate = vm.DueDate;
+                repo.Save();
             }
 
             return RedirectToAction("Index");
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult RemoveConfirmation(int? id)
+        {
+            var listToDelete = repo.ShoppingListRepository.GetOneByCondition(x => x.Id == id);
+
+            if (listToDelete != null)
+            {
+                repo.ShoppingListRepository.Delete(listToDelete);
+                repo.Save();
+                return RedirectToAction("Index");
+            }
+
+            return RedirectToAction("Delete");
         }
     }
 }

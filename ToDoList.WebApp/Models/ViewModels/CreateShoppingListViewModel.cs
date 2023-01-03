@@ -7,6 +7,7 @@ namespace ToDoList.WebApp.Models.ViewModels
     {
         [Required]
         [Display(Name = "Title")]
+        [MinLength(1, ErrorMessage = "Title should contain at least 1 character.")]
         [MaxLength(255, ErrorMessage = "Maximum title length is 255.")]
         public string Title { get; set; }
 

@@ -32,7 +32,7 @@ namespace ToDoList.WebApp.Controllers
         }
 
         [Authorize]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var UserId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
 

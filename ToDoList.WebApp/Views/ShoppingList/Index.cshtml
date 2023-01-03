@@ -1,20 +1,24 @@
 ﻿@using Todo.Domain.Entities
+@using ToDoList.WebApp.Models.ViewModels
 @model IQueryable<ShoppingList>
 
 @{
     ViewData["Title"] = "Shopping lists.";
 }
 
-<div class="col-12">
-    <div class="col-4" style="float:left"></div>
+<div class="d-flex">
+    <div class="col-4" style="float:left">
+            <partial name="ShoppingListSearchPartial" model="new SearchShoppingListViewModel()" />
+    </div>
     <div class="col-8">
-        @if (!@Model.Any()){
-            <h1>No shopping list found..</h1>
-            <a asp-action="Create" asp-controller="ShoppingList" class="btn btn-success">Add new!</a>
-        }
-        @foreach (var list in @Model)
-        {
-            <partial name="ShoppingListSummary" model="list" />
-        }
+            <a class="btn btn-success" asp-action="Create" asp-controller="ShoppingList">Add shopping list</a>
+            @if (!@Model.Any()){
+                <h1>No shopping list found..</h1>
+                <a asp-action="Create" asp-controller="ShoppingList" class="btn btn-success">Add new!</a>
+            }
+            @foreach (var list in @Model)
+            {
+                <partial name="ShoppingListSummary" model="list" />
+            }
     </div>
 </div>

@@ -21,6 +21,8 @@ namespace TodoApp.DAL.Wrappers
 
         IExpenseRepository ExpenseRepository { get; }
 
+        INotifyRepository NotifyRepository { get; }
+
         void Save();
     }
 }

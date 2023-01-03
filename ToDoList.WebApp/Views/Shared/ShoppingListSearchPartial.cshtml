@@ -1,0 +1,33 @@
+﻿@using ToDoList.WebApp.Models.ViewModels
+@model SearchShoppingListViewModel
+
+<div>
+    @using(Html.BeginForm())
+    {
+        <p>
+            Search by title @Html.TextBox("ShoppingListTitle") 
+            <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i></button>
+        </p>
+    }
+    <form class="form-group" method="post">
+        <label asp-for="CreatedDateFrom"></label>
+        <input type="datetime-local" asp-for="CreatedDateFrom" /> <br />
+        <label asp-for="CreatedDateTo"></label><br />
+        <input type="datetime-local" asp-for="CreatedDateTo" /> <br />
+        <label asp-for="DueDateFrom"></label>
+        <input type="datetime-local" asp-for="DueDateFrom" /> <br />
+        <label asp-for="DueDateTo"></label>
+        <input type="datetime-local" asp-for="DueDateTo" /> <br />
+        <label asp-for="OrderByCreatedDateType"></label> 
+        <select asp-for="OrderByCreatedDateType">
+            <option>Ascending</option>
+            <option>Descending</option>
+        </select> <br />
+        <label asp-for="OrderByDueDateType"></label> 
+        <select asp-for="OrderByDueDateType">
+            <option>Ascending</option>
+            <option>Descending</option>
+        </select><br />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>

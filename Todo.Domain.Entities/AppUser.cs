@@ -36,5 +36,7 @@ namespace Todo.Domain.Entities
         public IQueryable<Income> Incomes { get; set; }
 
         public IQueryable<Expense> Expenses { get; set; }
+
+        public IQueryable<Notify> Notifies { get; set; }
     }
 }

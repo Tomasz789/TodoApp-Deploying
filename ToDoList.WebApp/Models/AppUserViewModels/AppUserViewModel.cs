@@ -21,7 +21,8 @@ namespace ToDoList.WebApp.Models.AppUserViewModels
         [Display(Name = "Birth date")]
         public DateTime BirthDate { get; set; } = new DateTime(2000, 1, 1);
 
-        [Display(Name = "Profile photo")]
+        [Display(Name = "Avatar photo")]
         public string PhotoPath { get; set; }
+
     }
 }

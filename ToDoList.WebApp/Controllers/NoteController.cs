@@ -21,7 +21,9 @@ namespace ToDoList.WebApp.Controllers
         [Authorize]
         public IActionResult Index(SearchNoteViewModel vm, string NoteTitle = "", string NoteOrder = "")
         {
-            var model = _repo.NoteRepository.GetAll();
+            var userId = Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)); 
+            var model = _repo.NoteRepository.GetByCondition(u => u.UserId == userId);
+
             model = model.Where(x => x.CreatedDate >= vm.CreatedDateFrom && x.CreatedDate <= vm.CreatedDateTo);
 
             if (!string.IsNullOrEmpty(NoteTitle))
