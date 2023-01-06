@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x0KMb3iIZ+FrfbrhuuOLmS2Aj73XHm0XaccWZTf6xinBm7WKl2JIvH2tnOVNkANdWNn+kP4C84UUxoDBwTHdLw==",
+  "dgSpecHash": "R8djkuS/JincRoqgX3A2+UB8KoxwIr19j9p7obfjmpz25B2q/3vZbLXg86w4TsKDHJNnM4Js/279oC4vApzWvg==",
   "success": true,
-  "projectFilePath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj",
+  "projectFilePath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lacho\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],

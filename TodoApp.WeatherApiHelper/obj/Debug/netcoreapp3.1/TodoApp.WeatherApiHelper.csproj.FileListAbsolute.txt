@@ -8,3 +8,13 @@ D:\Projekt\aspnet-core-final-project\TodoApp.WeatherApiHelper\obj\Debug\netcorea
 D:\Projekt\aspnet-core-final-project\TodoApp.WeatherApiHelper\obj\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.csproj.CoreCompileInputs.cache
 D:\Projekt\aspnet-core-final-project\TodoApp.WeatherApiHelper\obj\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.dll
 D:\Projekt\aspnet-core-final-project\TodoApp.WeatherApiHelper\obj\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.pdb
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.WeatherApiHelper\bin\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.deps.json
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.WeatherApiHelper\bin\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.dll
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.WeatherApiHelper\bin\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.pdb
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.WeatherApiHelper\obj\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.csproj.AssemblyReference.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.WeatherApiHelper\obj\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.WeatherApiHelper\obj\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.AssemblyInfoInputs.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.WeatherApiHelper\obj\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.AssemblyInfo.cs
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.WeatherApiHelper\obj\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.csproj.CoreCompileInputs.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.WeatherApiHelper\obj\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.dll
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.WeatherApiHelper\obj\Debug\netcoreapp3.1\TodoApp.WeatherApiHelper.pdb

@@ -6417,11 +6417,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj",
+      "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\TodoApp.Repositories.csproj",
       "projectName": "TodoApp.Repositories",
-      "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj",
+      "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\TodoApp.Repositories.csproj",
       "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-      "outputPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\obj\\",
+      "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -6444,11 +6444,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
-              "projectPath": "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
+            "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
+              "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
             },
-            "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj": {
-              "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj"
+            "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\TodoApp.DAL.csproj": {
+              "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\TodoApp.DAL.csproj"
             }
           }
         }

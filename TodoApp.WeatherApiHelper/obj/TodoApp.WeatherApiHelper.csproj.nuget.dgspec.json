@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj": {}
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj": {}
   },
   "projects": {
-    "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj": {
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj",
+        "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj",
         "projectName": "TodoApp.WeatherApiHelper",
-        "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj",
+        "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj",
         "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\obj\\",
+        "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L39bnnTWB9NAeOfN65v0Ax1Osp40BV4p1Yo7+/sbdehXEkoP/Kpm3gRApiYEnmpadm9Htn0i6lFk938XoZV+mA==",
+  "dgSpecHash": "UPea023bJ83T2j5AuQCzLY1OrfQTTcdEoinNAEOfQCujxEfFH2XsAeVRsaETfWIYwB24aUtbXkwBpMZaYA6Meg==",
   "success": true,
-  "projectFilePath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj",
+  "projectFilePath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lacho\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",

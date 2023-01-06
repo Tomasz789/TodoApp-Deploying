@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9rUAAl7ZX0o2Zha0HvQQjgzSKf4Z8madR50ctq/gfpXSnIch3pZQUxZy0y4R5vfD5ZM00P863MUAN/X6iIkn7w==",
+  "dgSpecHash": "cjidImy5jQYD083aX4r5ffmYjb44cPEgcJ2GhVAsIHVa+2GGPrOonDvVUs1zz5lX+gop1z51TC24nPI0tBUEpw==",
   "success": true,
-  "projectFilePath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj",
+  "projectFilePath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\TodoApp.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lacho\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

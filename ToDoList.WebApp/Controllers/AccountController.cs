@@ -207,5 +207,10 @@ namespace ToDoList.WebApp.Controllers
         {
             return PartialView("AccountCredentialsPage", new UserCredentialsViewModel());
         }
+
+        public IActionResult GetAccountDetailsPartialView()
+        {
+            return PartialView("GetAccountDetailsPartialView", new AppUser());
+        }
     }
 }

@@ -8,31 +8,44 @@
     ViewData["Title"] = "Todoapp - create useful task lists";
 }
 
-@if (!signInManager.IsSignedIn(User))
-{
-    <partial name="StartPage" />
-}
-else {
-    <div class="text-center m-1 p-2">
-        <h1>Hello, <span class="text-warning">@User.Identity.Name!</span></h1>
-        <h2>Nice to see <span class="text-primary">You</span> again!</h2>
-        <p>Today is <strong class="text-success"> @DateTime.Now.Date.DayOfWeek </strong>, @string.Format(@DateTime.Now.ToString(), "dd-mm-yyyy")</p>
-    </div>
-    <div class="d-flex text-center">
-        <div class="p-5 w-75">
-            @if (@Model.Lists.Any())
-            {
-                @foreach (var t in @Model.Lists)
+@{
+    string photopath = "/appimg/userinitial.png";
+
+    @if (!signInManager.IsSignedIn(User))
+    {
+        <partial name="StartPage" />
+    }
+    else {
+        var userSigned = await signInManager.UserManager.FindByNameAsync(User.Identity.Name);
+        @if(userSigned.PhotoPath != null)
+        {
+            photopath = userSigned.PhotoPath;
+        }
+        <div class="text-center m-1 p-2">
+            <div>
+                <img src="@photopath" style="width:100px; height:100px; margin:2px;" />
+            </div>
+            <h1>Hello, <span class="text-warning">@User.Identity.Name!</span></h1>
+            <h2>Nice to see <span class="text-primary">You</span> again!</h2>
+            <p>Today is <strong class="text-success"> @DateTime.Now.Date.DayOfWeek </strong>, @string.Format(@DateTime.Now.ToString(), "dd-mm-yyyy")</p>
+        </div>
+        <div class="d-flex text-center">
+            <div class="p-5 w-75">
+                @if (@Model.Lists.Any())
                 {
-                    <partial name="StartPageTasksListSummary" model="@t"/>
+                    @foreach (var t in @Model.Lists)
+                    {
+                        <partial name="StartPageTasksListSummary" model="@t"/>
+                    }
                 }
-            }
-            else {
-                <h3>No important tasks - maybe add something?</h3>
-            }
-        </div>
-        <div class="p-5">
-            <partial name = "WeatherPartialView" model="@Model.Weather" />
-        </div>
-        </div>
+                else {
+                    <h3>No important tasks - maybe add something?</h3>
+                }
+            </div>
+            <div class="p-5">
+                <partial name = "WeatherPartialView" model="@Model.Weather" />
+            </div>
+ 
+       </div>
+    }
 }

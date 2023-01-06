@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace ToDoList.WebApp.Models.AppUserViewModels
@@ -23,6 +24,8 @@ namespace ToDoList.WebApp.Models.AppUserViewModels
 
         [Display(Name = "Avatar photo")]
         public string PhotoPath { get; set; }
+
+        public IFormFile Photo { get; set; }
 
     }
 }

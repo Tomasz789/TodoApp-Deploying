@@ -7,6 +7,7 @@
 
 <div class="d-flex col-12 border-2">
     <div class="btn-group-vertical m-3">
+        <button id="details" class="btn btn-white text-success border-success">Details</button>
         <button id="account" class="btn btn-white text-success border-success">Account settings</button>
         <button id="personal" class="btn btn-white text-success border-success">Personal data</button> 
     </div>
@@ -24,6 +25,10 @@
 
             $("#account").click(function(){
                 $("#loadPartial").load("/Account/GetAccountCredentialPartialView");
+            });
+
+            $("#details").click(function(){
+                $("#loadPartial").load("/Account/GetAccountDetailsPartialView");
             });
         });
     </script>

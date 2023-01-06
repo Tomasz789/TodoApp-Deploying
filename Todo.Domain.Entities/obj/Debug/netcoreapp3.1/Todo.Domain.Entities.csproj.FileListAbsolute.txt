@@ -24,3 +24,16 @@ D:\Projekt\aspnet-core-final-project\Todo.Domain.Entities\obj\Debug\netcoreapp3.
 D:\Projekt\aspnet-core-final-project\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.pdb
 D:\Projekt\aspnet-core-final-project\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.csproj.AssemblyReference.cache
 D:\Projekt\aspnet-core-final-project\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\bin\Debug\netcoreapp3.1\Todo.Domain.Entities.deps.json
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\bin\Debug\netcoreapp3.1\Todo.Domain.Entities.dll
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\bin\Debug\netcoreapp3.1\Todo.Domain.Entities.pdb
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\bin\Debug\netcoreapp3.1\TodoApp.DataVerifier.dll
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\bin\Debug\netcoreapp3.1\TodoApp.DataVerifier.pdb
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.csproj.AssemblyReference.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.AssemblyInfoInputs.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.AssemblyInfo.cs
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.csproj.CoreCompileInputs.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.csproj.CopyComplete
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.dll
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\Todo.Domain.Entities\obj\Debug\netcoreapp3.1\Todo.Domain.Entities.pdb

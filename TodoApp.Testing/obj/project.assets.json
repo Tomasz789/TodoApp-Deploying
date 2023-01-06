@@ -7636,11 +7636,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Testing\\TodoApp.Testing.csproj",
+      "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Testing\\TodoApp.Testing.csproj",
       "projectName": "TodoApp.Testing",
-      "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Testing\\TodoApp.Testing.csproj",
+      "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Testing\\TodoApp.Testing.csproj",
       "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-      "outputPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Testing\\obj\\",
+      "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Testing\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -7663,17 +7663,17 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
-              "projectPath": "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
+            "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
+              "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
             },
-            "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {
-              "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj"
+            "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {
+              "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj"
             },
-            "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj": {
-              "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj"
+            "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj": {
+              "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj"
             },
-            "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
-              "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj"
+            "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
+              "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\TodoApp.Repositories.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tZGgab2L90E8F7p0qxuutc94d3MgXt4CJVKjD6HSL3xRtKRtQZ2EfegyI41/6+itT7RFihto1qCCxD4aWI20SQ==",
+  "dgSpecHash": "e6LbRlXUinFjN53yvoQao1lZ9M5oLc1fD5Qrdw/R2jt9T16+JUVN6I97Oknj0HNYjaQ9IfS8qiMKF0TVVertfg==",
   "success": true,
-  "projectFilePath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Testing\\TodoApp.Testing.csproj",
+  "projectFilePath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Testing\\TodoApp.Testing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lacho\\.nuget\\packages\\castle.core\\5.0.0\\castle.core.5.0.0.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",

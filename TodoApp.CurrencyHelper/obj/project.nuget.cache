@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P+D2W7BzYjhIgM7kdM4dUsqHSZFA5cAEH5MMTsXYj1nqq3q612yOGKkpylP6LspNcsBDBuuW0dO0NAa6YC0evQ==",
+  "dgSpecHash": "mQBe0W5/hTuyw4fwEFopag6TZ6LK8DRVf8hrHVp34X3vcx3iTzQ5tuq2BwLkCoQ38kBpgEC5orGul+BwQEhRXg==",
   "success": true,
-  "projectFilePath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj",
+  "projectFilePath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lacho\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d9082033-44c9-42ab-8708-454968cfa4df": {
+      "ProjectGuid": "d9082033-44c9-42ab-8708-454968cfa4df",
+      "DisplayName": "ToDoList.WebApp",
+      "ColorIndex": 0
+    },
+    "9f4b977f-5240-40db-8de8-7a41b83e05c4": {
+      "ProjectGuid": "9f4b977f-5240-40db-8de8-7a41b83e05c4",
+      "DisplayName": "TodoApp.Repositories",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

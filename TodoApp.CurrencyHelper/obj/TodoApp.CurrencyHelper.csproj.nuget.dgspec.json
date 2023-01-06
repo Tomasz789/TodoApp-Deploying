@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {}
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {}
   },
   "projects": {
-    "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj",
+        "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj",
         "projectName": "TodoApp.CurrencyHelper",
-        "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj",
+        "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj",
         "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\obj\\",
+        "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

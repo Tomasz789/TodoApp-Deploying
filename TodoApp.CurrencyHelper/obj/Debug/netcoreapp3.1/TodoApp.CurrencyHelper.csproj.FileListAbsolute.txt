@@ -8,3 +8,13 @@ D:\Projekt\aspnet-core-final-project\TodoApp.CurrencyHelper\obj\Debug\netcoreapp
 D:\Projekt\aspnet-core-final-project\TodoApp.CurrencyHelper\obj\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.csproj.CoreCompileInputs.cache
 D:\Projekt\aspnet-core-final-project\TodoApp.CurrencyHelper\obj\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.dll
 D:\Projekt\aspnet-core-final-project\TodoApp.CurrencyHelper\obj\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.pdb
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.CurrencyHelper\bin\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.deps.json
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.CurrencyHelper\bin\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.dll
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.CurrencyHelper\bin\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.pdb
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.CurrencyHelper\obj\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.csproj.AssemblyReference.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.CurrencyHelper\obj\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.CurrencyHelper\obj\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.AssemblyInfoInputs.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.CurrencyHelper\obj\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.AssemblyInfo.cs
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.CurrencyHelper\obj\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.csproj.CoreCompileInputs.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.CurrencyHelper\obj\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.dll
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.CurrencyHelper\obj\Debug\netcoreapp3.1\TodoApp.CurrencyHelper.pdb

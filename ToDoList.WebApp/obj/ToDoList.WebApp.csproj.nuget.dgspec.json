@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projekt\\aspnet-core-final-project\\ToDoList.WebApp\\ToDoList.WebApp.csproj": {}
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\ToDoList.WebApp\\ToDoList.WebApp.csproj": {}
   },
   "projects": {
-    "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj",
+        "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj",
         "projectName": "Todo.Domain.Entities",
-        "projectPath": "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj",
+        "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj",
         "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\obj\\",
+        "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,8 +34,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj"
               }
             }
           }
@@ -82,14 +82,14 @@
         }
       }
     },
-    "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj",
+        "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj",
         "projectName": "TodoApp.CurrencyHelper",
-        "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj",
+        "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj",
         "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\obj\\",
+        "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -148,14 +148,14 @@
         }
       }
     },
-    "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj": {
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\TodoApp.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj",
+        "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\TodoApp.DAL.csproj",
         "projectName": "TodoApp.DAL",
-        "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj",
+        "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\TodoApp.DAL.csproj",
         "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\obj\\",
+        "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -178,8 +178,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
               }
             }
           }
@@ -244,14 +244,14 @@
         }
       }
     },
-    "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj": {
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj",
+        "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj",
         "projectName": "TodoApp.DataVerifier",
-        "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj",
+        "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj",
         "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DataVerifier\\obj\\",
+        "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DataVerifier\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -304,14 +304,14 @@
         }
       }
     },
-    "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj": {
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj",
+        "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj",
         "projectName": "TodoApp.Interop.Services",
-        "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj",
+        "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj",
         "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\obj\\",
+        "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Interop.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -334,8 +334,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
               }
             }
           }
@@ -368,14 +368,14 @@
         }
       }
     },
-    "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj",
+        "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\TodoApp.Repositories.csproj",
         "projectName": "TodoApp.Repositories",
-        "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj",
+        "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\TodoApp.Repositories.csproj",
         "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\obj\\",
+        "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -398,11 +398,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
               },
-              "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\TodoApp.DAL.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\TodoApp.DAL.csproj"
               }
             }
           }
@@ -435,14 +435,14 @@
         }
       }
     },
-    "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj": {
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj",
+        "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj",
         "projectName": "TodoApp.WeatherApiHelper",
-        "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj",
+        "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj",
         "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\obj\\",
+        "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -501,14 +501,14 @@
         }
       }
     },
-    "D:\\Projekt\\aspnet-core-final-project\\ToDoList.WebApp\\ToDoList.WebApp.csproj": {
+    "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\ToDoList.WebApp\\ToDoList.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekt\\aspnet-core-final-project\\ToDoList.WebApp\\ToDoList.WebApp.csproj",
+        "projectUniqueName": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\ToDoList.WebApp\\ToDoList.WebApp.csproj",
         "projectName": "ToDoList.WebApp",
-        "projectPath": "D:\\Projekt\\aspnet-core-final-project\\ToDoList.WebApp\\ToDoList.WebApp.csproj",
+        "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\ToDoList.WebApp\\ToDoList.WebApp.csproj",
         "packagesPath": "C:\\Users\\lacho\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekt\\aspnet-core-final-project\\ToDoList.WebApp\\obj\\",
+        "outputPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\ToDoList.WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -531,23 +531,23 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\Todo.Domain.Entities\\Todo.Domain.Entities.csproj"
               },
-              "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.CurrencyHelper\\TodoApp.CurrencyHelper.csproj"
               },
-              "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DAL\\TodoApp.DAL.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\TodoApp.DAL.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DAL\\TodoApp.DAL.csproj"
               },
-              "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Interop.Services\\TodoApp.Interop.Services.csproj"
               },
-              "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.Repositories\\TodoApp.Repositories.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\TodoApp.Repositories.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.Repositories\\TodoApp.Repositories.csproj"
               },
-              "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj": {
-                "projectPath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj"
+              "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj": {
+                "projectPath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.WeatherApiHelper\\TodoApp.WeatherApiHelper.csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E14DTytKHA+UGrn25Co3nEX90cWhKlKffZ6ujCNcG/qIi4nNQB0b2Squs535wGJcqozBsyJNY0dExq9PSHMUJw==",
+  "dgSpecHash": "+cGjklsRV+EFQ1VWsKycFbC6w+BKB6Xk2vmWMgywdu/OONjHQSIszM1oIyj0tkORLm3rQQ6q760gK/5GO2G26g==",
   "success": true,
-  "projectFilePath": "D:\\Projekt\\aspnet-core-final-project\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj",
+  "projectFilePath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.DataVerifier\\TodoApp.DataVerifier.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

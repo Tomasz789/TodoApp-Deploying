@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dV0ePAcU9nIqIxDdKbZW//TQCaXjdZ/tSyjZysS+i2tJH0cw5SJ0yk4CtLE5bnBgjBHEngvivTEMmHc+XSVJsw==",
+  "dgSpecHash": "v4M/ItNxwPb1MQe54BUZR7K9OURpNKW7+qxlNeH9FWxJBhqMSWjSfOT/cM7c4GrrFdVS+pFrk1QWOx+X3HNkHA==",
   "success": true,
-  "projectFilePath": "D:\\Projekt\\aspnet-core-final-project\\ToDoList.WebApp\\ToDoList.WebApp.csproj",
+  "projectFilePath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\ToDoList.WebApp\\ToDoList.WebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lacho\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\lacho\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
