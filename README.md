@@ -23,6 +23,8 @@ Web application puropsed for Todo list and todo tasks managment. User can also c
 
 ![Image](https://github.com/Tomasz789/TodoApp-Deploying/blob/master/images/listpage.JPG)
 
+![Image](https://github.com/Tomasz789/TodoApp-Deploying/blob/master/images/budget.JPG)
+
 ![Image](https://github.com/Tomasz789/TodoApp-Deploying/blob/master/images/notepage.JPG)
 
 ![Image](https://github.com/Tomasz789/TodoApp-Deploying/blob/master/images/shoppinglist.JPG)
