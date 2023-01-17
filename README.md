@@ -6,7 +6,7 @@ Web application puropsed for Todo list and todo tasks managment. User can also c
 
 ![Image](https://github.com/Tomasz789/TodoApp-Deploying/blob/master/images/startpage.JPG)
 
-![Image](https://github.com/Tomasz789/TodoApp-Deploying/blob/master/images/userpage.JPG)
+![Image](https://github.com/Tomasz789/TodoApp-Deploying/blob/master/images/startpage2.JPG)
 
 ## Features:
 
