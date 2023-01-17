@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -18,10 +20,12 @@ namespace ToDoList.WebApp.Controllers
         private readonly IRepositoryWrapper repositoryWrapper;
         private readonly UserManager<AppUser> userManager;
         private readonly SignInManager<AppUser> signInManager;
+        private readonly IHostingEnvironment hostingEnv;
 
-        public AccountController(IRepositoryWrapper wrapper, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        public AccountController(IRepositoryWrapper wrapper, IHostingEnvironment env, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
             repositoryWrapper = wrapper;
+            hostingEnv = env;
             this.userManager = userManager;
             this.signInManager = signInManager;
         }
@@ -42,12 +46,12 @@ namespace ToDoList.WebApp.Controllers
         [HttpGet]
         public IActionResult ChangeUserNameAsync()
         {
-            return View();
+            return RedirectToAction("Edit");
         }
 
         [Authorize]
-
-        public async Task<IActionResult> ChangeUserNameAsync(UserCredentialsViewModel vm)
+        [HttpPost]
+        public async Task ChangeUserNameAsync(UserCredentialsViewModel vm)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
@@ -61,12 +65,32 @@ namespace ToDoList.WebApp.Controllers
             if (ModelState.IsValid)
             {
                 user.UserName = vm.UserName;
-                //var passwordToken = await userManager.GeneratePasswordResetTokenAsync(user);
-               // var passwordResult = await userManager.ResetPasswordAsync(user, passwordToken, vm.Password);
                 await signInManager.UserManager.UpdateAsync(user);
             }
 
-            return View();
+//            return RedirectToAction("Edit");
+        }
+
+        [Authorize]
+
+        public async Task<IActionResult> ChangeUserPassword(UserCredentialsViewModel vm)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var user = await userManager.FindByIdAsync(userId);
+
+            if (ModelState.IsValid)
+            {
+                var passwordToken = await userManager.GeneratePasswordResetTokenAsync(user);
+                var passwordResult = await userManager.ResetPasswordAsync(user, passwordToken, vm.Password);
+
+                if (passwordResult.Succeeded)
+                {
+                    await signInManager.UserManager.UpdateAsync(user);
+                }
+            }
+
+            return RedirectToAction("Edit");
         }
 
         [HttpPost]
@@ -177,7 +201,7 @@ namespace ToDoList.WebApp.Controllers
                     var user = await userManager.FindByEmailAsync(userEmail);  // find user and check if exists
 
                     // add when user doesn't exist
-                    if (user != null)
+                    if (user == null)
                     {
                         user = new AppUser()
                         {
@@ -186,6 +210,7 @@ namespace ToDoList.WebApp.Controllers
                         };
 
                         await userManager.CreateAsync(user);        // add new user by Google email
+
                     }
 
                     await userManager.AddLoginAsync(user, signInInfo);
@@ -198,9 +223,66 @@ namespace ToDoList.WebApp.Controllers
             return View();
         }
 
-        public IActionResult GetPersonalDataPartialView()
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> Edit(AppUserViewModel vm)
         {
-            return PartialView("PersonalDataEditPage", new AppUserViewModel());
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await userManager.FindByIdAsync(userId);
+
+            if (ModelState.IsValid)
+            {
+                user.FirstName = vm.FirstName;
+                user.LastName = vm.LastName;
+                user.City = vm.City;
+                user.Country = vm.Country;
+                user.BirthDate = vm.BirthDate;
+                
+                await userManager.UpdateAsync(user);
+                return View();
+            }
+
+            return RedirectToAction("Edit");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UploadUserImage(AppUserViewModel vm)
+        {
+            if (vm.Photo == null)
+            {
+                return RedirectToAction("Edit");
+            }
+
+            string uniquePath = null;
+
+            var imgUploadPath = Path.Combine(hostingEnv.WebRootPath, "appimg");
+            uniquePath = $"{Guid.NewGuid()}_{vm.Photo.FileName}";
+            string filePath = Path.Combine(imgUploadPath,uniquePath);
+            vm.Photo.CopyTo(new FileStream(filePath, FileMode.Create));
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await userManager.FindByIdAsync(userId);
+
+            user.PhotoPath = uniquePath;
+            await userManager.UpdateAsync(user);
+
+            return View();
+        }
+        //-----------invoking partial views------------------
+        public async Task<IActionResult> GetPersonalDataPartialView()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await userManager.FindByIdAsync(userId);
+
+            var vm = new AppUserViewModel()
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Country = user.Country,
+                City = user.City,
+                BirthDate = user.BirthDate,
+            };
+
+            return PartialView("PersonalDataEditPage", vm);
         }
 
         public IActionResult GetAccountCredentialPartialView()
@@ -210,7 +292,7 @@ namespace ToDoList.WebApp.Controllers
 
         public IActionResult GetAccountDetailsPartialView()
         {
-            return PartialView("GetAccountDetailsPartialView", new AppUser());
+            return PartialView("AccountDetailsPartialView", new AppUser());
         }
     }
 }
