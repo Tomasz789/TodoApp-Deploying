@@ -1,0 +1,13 @@
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\bin\Debug\netcoreapp3.1\TodoApp.EmailService.deps.json
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\bin\Debug\netcoreapp3.1\TodoApp.EmailService.dll
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\bin\Debug\netcoreapp3.1\TodoApp.EmailService.pdb
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\bin\Debug\netcoreapp3.1\TodoApp.DataVerifier.dll
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\bin\Debug\netcoreapp3.1\TodoApp.DataVerifier.pdb
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\obj\Debug\netcoreapp3.1\TodoApp.EmailService.csproj.AssemblyReference.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\obj\Debug\netcoreapp3.1\TodoApp.EmailService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\obj\Debug\netcoreapp3.1\TodoApp.EmailService.AssemblyInfoInputs.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\obj\Debug\netcoreapp3.1\TodoApp.EmailService.AssemblyInfo.cs
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\obj\Debug\netcoreapp3.1\TodoApp.EmailService.csproj.CoreCompileInputs.cache
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\obj\Debug\netcoreapp3.1\TodoApp.EmailService.csproj.CopyComplete
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\obj\Debug\netcoreapp3.1\TodoApp.EmailService.dll
+D:\Projekt\TodoApp-FinalVersion\TodoApp-Deploying\TodoApp.EmailService\obj\Debug\netcoreapp3.1\TodoApp.EmailService.pdb

@@ -1,0 +1,8 @@
+{
+  "smtpConfig": {
+    "Host": "smtp.mailtrap.io",
+    "Port": 587,
+    "Username": "b710f388ad0352",
+    "Password": "53deb1d1a6e226"
+  }
+}

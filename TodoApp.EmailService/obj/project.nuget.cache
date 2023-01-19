@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "7Vt125kvKoTSfpkTtKQ19QDRXO8dDCdx32+hKvDm0macV0g2+Ii0xPdK6gxzuYo5ftpdwqB5kMChmda6vwLs4Q==",
+  "success": true,
+  "projectFilePath": "D:\\Projekt\\TodoApp-FinalVersion\\TodoApp-Deploying\\TodoApp.EmailService\\TodoApp.EmailService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lacho\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.32\\microsoft.extensions.configuration.3.1.32.nupkg.sha512",
+    "C:\\Users\\lacho\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.32\\microsoft.extensions.configuration.abstractions.3.1.32.nupkg.sha512",
+    "C:\\Users\\lacho\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.1.32\\microsoft.extensions.configuration.fileextensions.3.1.32.nupkg.sha512",
+    "C:\\Users\\lacho\\.nuget\\packages\\microsoft.extensions.configuration.json\\3.1.32\\microsoft.extensions.configuration.json.3.1.32.nupkg.sha512",
+    "C:\\Users\\lacho\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.32\\microsoft.extensions.fileproviders.abstractions.3.1.32.nupkg.sha512",
+    "C:\\Users\\lacho\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.32\\microsoft.extensions.fileproviders.physical.3.1.32.nupkg.sha512",
+    "C:\\Users\\lacho\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.32\\microsoft.extensions.filesystemglobbing.3.1.32.nupkg.sha512",
+    "C:\\Users\\lacho\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.32\\microsoft.extensions.primitives.3.1.32.nupkg.sha512"
+  ],
+  "logs": []
+}
