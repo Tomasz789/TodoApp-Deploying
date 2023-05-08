@@ -31,6 +31,9 @@ Web application puropsed for Todo list and todo tasks managment. User can also c
 
 ![Image](https://github.com/Tomasz789/TodoApp-Deploying/blob/master/images/tasklist.JPG)
 
+![Image](https://github.com/Tomasz789/TodoApp-Deploying/blob/master/images/email.JPG)
+
+
 ## TODO
 
 1. Add statistics for lists and tasks.
