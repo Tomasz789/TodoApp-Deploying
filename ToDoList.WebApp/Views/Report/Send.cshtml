@@ -1,0 +1,49 @@
+﻿@using ToDoList.WebApp.Models.ViewModels
+@using Todo.Domain.Entities.ReportTypes
+@inject TodoApp.WeatherApiHelper.Configs.IConfig CaptchaConfig
+@model ReportMessageViewModel
+
+@{
+    ViewData["Title"] = "Report a problem, send a remark.";
+}
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input type="text"asp-for="Title" class="form-control" />
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Content"></label>
+        <textarea asp-for="Content" class="form-control" rows="6"></textarea>
+        <span class="text-danger" asp-validation-for="Content"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ReportType"></label>
+        <select class="form-control" asp-for="ReportType" asp-items="@Html.GetEnumSelectList<ReportType>()">
+            <option selected="selected">Select</option>
+        </select>
+        <span class="text-danger" asp-validation-for="ReportType"></span>
+    </div>
+    <div id="captchaBtn" class="g-recaptcha" data-sitekey="@CaptchaConfig.SiteKey" data-callback="onsubmit" data-action="submit">Check</div>
+    <input id="capToken" type="hidden" asp-for="CaptchaToken" />
+    <div class="btn-group">
+        <button type="submit" class="btn btn-success m-2">Submit message</button>
+        <a class="btn btn-danger" asp-action="Edit" asp-controller="Account">Cancel</a>
+    </div>
+</form>
+
+@section Scripts{
+     <script src='https://www.google.com/recaptcha/api.js?render=@CaptchaConfig.SiteKey"'></script>   
+     <script>
+
+         var captcha = document.getElementById('captchaBtn');
+         var capInput = document.getElementById('capToken');
+
+         function onsubmit()
+         {
+             var res = grecaptcha.getResponse();
+             capInput.value = res;
+         };
+
+     </script>
+}
